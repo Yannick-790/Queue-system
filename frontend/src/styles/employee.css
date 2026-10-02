@@ -1,0 +1,935 @@
+/* =========================================================
+   QUEUEFLOW — EMPLOYEE MANAGEMENT
+   Professional Admin Interface
+   ========================================================= */
+
+.employees-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: employeesFadeIn 0.35s ease;
+}
+
+@keyframes employeesFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.employees-header {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 26px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.employees-eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.employees-header h1 {
+    margin: 0;
+
+    color: #0f172a;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+}
+
+.employees-header p {
+    margin: 8px 0 0;
+
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.btn-primary {
+    border: none;
+    outline: none;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    padding: 11px 20px;
+    min-height: 44px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 16px rgba(37, 99, 235, 0.24);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.btn-secondary {
+    min-height: 44px;
+
+    padding: 10px 18px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+.btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.employee-error {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 14px 17px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+    border-left: 4px solid #dc2626;
+
+    border-radius: 12px;
+
+    color: #991b1b;
+
+    animation: employeesFadeIn 0.25s ease;
+}
+
+.employee-error strong {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.employee-error span {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ADD EMPLOYEE FORM PANEL
+   ========================================================= */
+
+.employee-form-panel {
+    background: #ffffff;
+
+    border: 1px solid #dbe3ef;
+    border-radius: 18px;
+
+    padding: 26px 28px;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 10px 30px rgba(15, 23, 42, 0.06);
+
+    animation: employeesFormIn 0.3s ease;
+}
+
+@keyframes employeesFormIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.employee-form-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 22px;
+
+    margin-bottom: 24px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.employee-form-header h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.employee-form-header p {
+    margin: 6px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* CLOSE BUTTON */
+
+.form-close {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #64748b;
+
+    font-size: 22px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.form-close:hover {
+    background: #f8fafc;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.employee-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group label > span {
+    color: #dc2626;
+}
+
+.form-group label small {
+    margin-left: auto;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* INPUTS + SELECTS */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 13px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #0f172a;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select:disabled {
+    background: #f8fafc;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.employee-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 26px;
+    padding-top: 20px;
+
+    border-top: 1px solid #eef2f7;
+}
+
+
+/* =========================================================
+   TABLE PANEL
+   ========================================================= */
+
+.table-panel {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 8px;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 8px 24px rgba(15, 23, 42, 0.05);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TABLE HEADING
+   ========================================================= */
+
+.table-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 20px 16px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.table-heading h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.table-heading p {
+    margin: 4px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.employee-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   EMPLOYEE TABLE
+   ========================================================= */
+
+.employee-table {
+    width: 100%;
+    min-width: 850px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    text-align: left;
+}
+
+
+/* TABLE HEADER */
+
+.employee-table thead {
+    background: #f8fafc;
+}
+
+.employee-table th {
+    padding: 14px 18px;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    white-space: nowrap;
+}
+
+.employee-table th:first-child {
+    padding-left: 20px;
+}
+
+.employee-table th:last-child {
+    padding-right: 20px;
+}
+
+
+/* TABLE BODY */
+
+.employee-table td {
+    padding: 17px 18px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    vertical-align: middle;
+}
+
+.employee-table tbody tr {
+    background: #ffffff;
+
+    transition: background 0.2s ease;
+}
+
+.employee-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.employee-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   EMPLOYEE PROFILE CELL
+   ========================================================= */
+
+.user-cell {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 220px;
+}
+
+
+/* AVATAR */
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    border: 1px solid #dbeafe;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+
+/* NAME */
+
+.user-name {
+    display: block;
+
+    color: #0f172a;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* EMAIL */
+
+.user-email {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 28px;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.badge-role {
+    background: #f1f5f9;
+    color: #475569;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+   ========================================================= */
+
+.action-btn-danger {
+    border: 1px solid #fecaca;
+
+    background: #ffffff;
+    color: #dc2626;
+
+    padding: 8px 13px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.action-btn-danger:hover {
+    background: #fef2f2;
+    border-color: #fca5a5;
+
+    transform: translateY(-1px);
+}
+
+.action-btn-danger:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.employees-empty {
+    min-height: 330px;
+
+    padding: 55px 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: 18px;
+
+    border-radius: 18px;
+
+    background: #eff6ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.employees-empty h3 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.employees-empty p {
+    max-width: 430px;
+
+    margin: 8px 0 20px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.employees-loading {
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+}
+
+.employees-loading p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.employees-spinner {
+    width: 34px;
+    height: 34px;
+
+    border: 3px solid #dbeafe;
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: employeeSpinner 0.8s linear infinite;
+}
+
+@keyframes employeeSpinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.employee-table-wrapper::-webkit-scrollbar {
+    height: 7px;
+}
+
+.employee-table-wrapper::-webkit-scrollbar-track {
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.employee-table-wrapper::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.employee-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .employees-header {
+        padding: 22px;
+    }
+
+    .employees-header h1 {
+        font-size: 26px;
+    }
+
+    .employee-form-panel {
+        padding: 22px;
+    }
+
+    .employee-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-table th,
+    .employee-table td {
+        padding: 14px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .employees-page {
+        gap: 18px;
+    }
+
+    .employees-header {
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 20px;
+
+        border-radius: 15px;
+    }
+
+    .employees-header h1 {
+        font-size: 23px;
+    }
+
+    .employees-header p {
+        font-size: 13px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .employee-form-panel {
+        padding: 18px;
+
+        border-radius: 15px;
+    }
+
+    .employee-form-header {
+        margin-bottom: 20px;
+    }
+
+    .employee-form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .employee-form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .employee-form-actions button {
+        width: 100%;
+    }
+
+    .table-panel {
+        border-radius: 15px;
+    }
+
+    .table-heading {
+        padding: 17px 15px 14px;
+    }
+
+    .employee-table {
+        min-width: 850px;
+    }
+
+    .employees-empty {
+        min-height: 280px;
+        padding: 40px 20px;
+    }
+
+    .employees-empty .btn-primary {
+        width: auto;
+    }
+
+    .avatar {
+        width: 38px;
+        height: 38px;
+    }
+}
+

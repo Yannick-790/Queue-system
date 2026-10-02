@@ -1,0 +1,583 @@
+/* ==============================
+   VARIABLES
+================================ */
+
+:root{
+
+--sidebar-width:260px;
+
+}
+
+
+/* ==============================
+   MAIN LAYOUT
+================================ */
+
+.app-layout{
+
+display:flex;
+
+min-height:100vh;
+
+background:#f8fafc;
+
+}
+
+
+/* ==============================
+   SIDEBAR
+================================ */
+
+.sidebar{
+
+width:var(--sidebar-width);
+
+background:#ffffff;
+
+border-right:1px solid #e5e7eb;
+
+padding:24px 20px;
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+bottom:0;
+
+overflow-y:auto;
+
+z-index:1000;
+
+transition:transform .3s ease;
+
+box-shadow:0 0 25px rgba(0,0,0,.05);
+
+}
+
+
+.sidebar::-webkit-scrollbar{
+
+width:6px;
+
+}
+
+
+.sidebar::-webkit-scrollbar-thumb{
+
+background:#d1d5db;
+
+border-radius:20px;
+
+}
+
+
+/* ==============================
+   MAIN CONTENT
+================================ */
+
+.main-content{
+
+margin-left:var(--sidebar-width);
+
+width:calc(100% - var(--sidebar-width));
+
+display:flex;
+
+flex-direction:column;
+
+min-height:100vh;
+
+transition:.3s;
+
+}
+
+
+/* ==============================
+   PAGE
+================================ */
+
+.page-container{
+
+padding:30px;
+
+flex:1;
+
+animation:fadePage .35s ease;
+
+}
+
+
+@keyframes fadePage{
+
+from{
+
+opacity:0;
+
+transform:translateY(8px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ==============================
+   LOGO
+================================ */
+
+.sidebar-logo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+padding-bottom:24px;
+
+margin-bottom:24px;
+
+border-bottom:1px solid #e5e7eb;
+
+}
+
+
+.logo-circle{
+
+width:46px;
+
+height:46px;
+
+border-radius:14px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#2563eb;
+
+color:#fff;
+
+font-size:22px;
+
+font-weight:800;
+
+}
+
+
+/* ==============================
+   USER
+================================ */
+
+.sidebar-user{
+
+background:#f8fafc;
+
+border-radius:16px;
+
+padding:16px;
+
+margin-bottom:24px;
+
+}
+
+
+.sidebar-user h4{
+
+margin:0;
+
+font-size:15px;
+
+}
+
+
+.sidebar-user span{
+
+display:inline-block;
+
+margin-top:8px;
+
+padding:5px 12px;
+
+border-radius:20px;
+
+background:#dbeafe;
+
+color:#2563eb;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+
+/* ==============================
+   MENU
+================================ */
+
+.sidebar-menu{
+
+display:flex;
+
+flex-direction:column;
+
+gap:8px;
+
+}
+
+
+.sidebar-menu a{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px 15px;
+
+text-decoration:none;
+
+color:#475569;
+
+font-weight:600;
+
+border-radius:12px;
+
+transition:.25s;
+
+}
+
+
+.sidebar-menu a:hover{
+
+background:#eff6ff;
+
+color:#2563eb;
+
+}
+
+
+.sidebar-menu a.active{
+
+background:#2563eb;
+
+color:#fff;
+
+}
+
+
+/* ==============================
+   MENU LOADER
+================================ */
+
+.menu-loader{
+
+display:flex;
+
+justify-content:center;
+
+gap:6px;
+
+margin-top:30px;
+
+}
+
+
+.menu-loader span{
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:#2563eb;
+
+animation:pulse 1s infinite;
+
+}
+
+
+.menu-loader span:nth-child(2){
+
+animation-delay:.2s;
+
+}
+
+
+.menu-loader span:nth-child(3){
+
+animation-delay:.4s;
+
+}
+
+
+@keyframes pulse{
+
+0%,100%{
+
+transform:translateY(0);
+
+opacity:.3;
+
+}
+
+50%{
+
+transform:translateY(-7px);
+
+opacity:1;
+
+}
+
+}
+
+
+/* ==============================
+   PAGE HEADER
+================================ */
+
+.page-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:30px;
+
+}
+
+
+.page-title{
+
+font-size:30px;
+
+font-weight:800;
+
+}
+
+
+.page-description{
+
+margin-top:8px;
+
+color:#64748b;
+
+}
+
+
+/* ==============================
+   CARD
+================================ */
+
+.dashboard-card{
+
+background:#fff;
+
+border:1px solid #e5e7eb;
+
+border-radius:20px;
+
+padding:25px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+transition:.3s;
+
+}
+
+
+.dashboard-card:hover{
+
+transform:translateY(-4px);
+
+}
+
+
+/* ==============================
+   TOGGLE BUTTON
+================================ */
+
+.menu-toggle{
+
+display:none;
+
+position:fixed;
+
+top:18px;
+
+left:18px;
+
+width:45px;
+
+height:45px;
+
+border:none;
+
+border-radius:12px;
+
+background:#2563eb;
+
+color:#fff;
+
+font-size:22px;
+
+cursor:pointer;
+
+z-index:2000;
+
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width:900px){
+
+.menu-toggle{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.sidebar{
+
+transform:translateX(-100%);
+
+}
+
+.sidebar.open{
+
+transform:translateX(0);
+
+}
+
+.main-content{
+
+margin-left:0;
+
+width:100%;
+
+}
+
+.page-container{
+
+padding:20px;
+
+}
+
+.page-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+}
+
+
+
+/* =========================================================
+   SETUP ORGANIZATION STATUS
+========================================================= */
+
+.setup-menu-item {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.setup-menu-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setup-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+/* LOADING */
+
+.setup-status.loading {
+  background: #e5e7eb;
+  color: #64748b;
+}
+
+
+/* SETUP NOT FINISHED */
+
+.setup-status.incomplete {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+
+/* SETUP COMPLETED */
+
+.setup-status.completed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+
+/* ACTIVE LINK */
+
+.sidebar-menu a.active.setup-menu-item {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+
+/* ACTIVE LINK STATUS */
+
+.sidebar-menu a.active.setup-menu-item
+.setup-status.completed {
+  background: #ffffff;
+  color: #15803d;
+}
+
+
+.sidebar-menu a.active.setup-menu-item
+.setup-status.incomplete {
+  background: #ffffff;
+  color: #b45309;
+}

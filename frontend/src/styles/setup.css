@@ -1,0 +1,1306 @@
+/* =====================================================
+   QUEUEFLOW SETUP SYSTEM
+   Company / Building / Department / Service / Flow
+===================================================== */
+
+
+/* ===============================
+   PAGE CONTAINER
+================================ */
+
+.setup-container,
+.max-w-3xl,
+.max-w-5xl {
+
+    max-width:1100px;
+    margin:0 auto;
+
+    animation:setupFade .35s ease;
+
+}
+
+
+/* ===============================
+   HEADINGS
+================================ */
+
+.setup-container h1,
+.max-w-3xl h1,
+.max-w-5xl h1 {
+
+    font-size:34px;
+    font-weight:800;
+    color:#111827;
+    margin-bottom:8px;
+
+}
+
+
+.setup-container > p,
+.max-w-3xl > p,
+.max-w-5xl > p {
+
+    color:#64748b;
+    font-size:16px;
+    margin-bottom:35px;
+
+}
+
+
+/* ===============================
+   CARDS
+================================ */
+
+.setup-card,
+.bg-white {
+
+    background:white;
+
+    border-radius:20px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+    padding:28px;
+
+    transition:.3s ease;
+
+}
+
+
+.setup-card:hover,
+.bg-white:hover {
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.08);
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* ===============================
+   FORM AREA
+================================ */
+
+label {
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#374151;
+
+    margin-bottom:8px;
+
+}
+
+
+input,
+select,
+textarea {
+
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    border:1px solid #d1d5db;
+
+    background:white;
+
+    font-size:15px;
+
+    color:#111827;
+
+    transition:.25s;
+
+
+}
+
+
+
+input:hover,
+select:hover,
+textarea:hover {
+
+    border-color:#94a3b8;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:
+    0 0 0 4px rgba(37,99,235,.12);
+
+
+}
+
+
+
+/* ===============================
+   GRID
+================================ */
+
+
+.grid {
+
+    display:grid;
+
+}
+
+
+.md\:grid-cols-2 {
+
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+}
+
+
+.gap-5 {
+
+    gap:25px;
+
+}
+
+
+.gap-6 {
+
+    gap:30px;
+
+}
+
+
+
+/* ===============================
+   BUTTONS
+================================ */
+
+
+button {
+
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover:not(:disabled){
+
+    transform:translateY(-2px);
+
+}
+
+
+
+button:disabled {
+
+
+    cursor:not-allowed;
+
+    opacity:.6;
+
+}
+
+
+
+/* blue buttons */
+
+.bg-blue-600 {
+
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px 24px;
+
+
+}
+
+
+.bg-blue-600:hover {
+
+
+    background:#1d4ed8;
+
+}
+
+
+
+/* green buttons */
+
+.bg-green-600 {
+
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:14px 28px;
+
+
+}
+
+
+
+.bg-green-600:hover {
+
+
+    background:#15803d;
+
+}
+
+
+
+/* normal buttons */
+
+.border {
+
+
+    background:white;
+
+    border:1px solid #d1d5db;
+
+    padding:14px 25px;
+
+}
+
+
+
+.border:hover {
+
+    background:#f8fafc;
+
+}
+
+
+
+/* ===============================
+   FLOW SELECTION
+================================ */
+
+
+.flow-card {
+
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:2px solid #e5e7eb;
+
+    background:white;
+
+    text-align:left;
+
+    transition:.3s;
+
+
+}
+
+
+.flow-card:hover {
+
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+
+
+}
+
+
+.flow-active {
+
+
+    border-color:#2563eb;
+
+    background:#eff6ff;
+
+}
+
+
+
+
+/* ===============================
+   TABLES
+================================ */
+
+
+table {
+
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+thead {
+
+
+    background:#f8fafc;
+
+
+}
+
+
+
+th {
+
+
+    padding:16px;
+
+    text-align:left;
+
+    color:#374151;
+
+    font-size:14px;
+
+}
+
+
+
+td {
+
+
+    padding:16px;
+
+    border-top:1px solid #e5e7eb;
+
+    color:#475569;
+
+}
+
+
+
+tbody tr {
+
+
+    transition:.2s;
+
+}
+
+
+tbody tr:hover {
+
+
+    background:#f8fafc;
+
+}
+
+
+
+/* ===============================
+   EMPTY STATE
+================================ */
+
+
+.text-gray-500 {
+
+
+    color:#64748b;
+
+}
+
+
+
+.text-center {
+
+
+    text-align:center;
+
+}
+
+
+
+.p-10 {
+
+
+    padding:50px;
+
+}
+
+
+
+/* ===============================
+   LOADING
+================================ */
+
+
+.loading {
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px;
+
+}
+
+
+
+.loading-spinner {
+
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    border:4px solid #dbeafe;
+
+    border-top-color:#2563eb;
+
+    animation:spin .8s linear infinite;
+
+
+}
+
+
+
+@keyframes spin {
+
+
+    from {
+
+        transform:rotate(0deg);
+
+    }
+
+
+    to {
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+
+/* ===============================
+   SETUP FOOTER BUTTONS
+================================ */
+
+
+.flex {
+
+
+    display:flex;
+
+}
+
+
+
+.justify-between {
+
+
+    justify-content:space-between;
+
+}
+
+
+
+.justify-end {
+
+
+    justify-content:flex-end;
+
+}
+
+
+
+.items-center {
+
+
+    align-items:center;
+
+}
+
+
+
+.mt-8 {
+
+
+    margin-top:35px;
+
+}
+
+
+
+
+/* ===============================
+   ANIMATION
+================================ */
+
+
+@keyframes setupFade {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+
+@media(max-width:768px){
+
+
+    .max-w-3xl,
+    .max-w-5xl {
+
+
+        padding:10px;
+
+    }
+
+
+
+    .md\:grid-cols-2 {
+
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .flex {
+
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+
+
+    button {
+
+
+        width:100%;
+
+    }
+
+
+
+    table {
+
+
+        display:block;
+
+        overflow-x:auto;
+
+    }
+
+
+
+}
+
+
+
+
+/* ===============================
+   EMPLOYEE REGISTRATION TOGGLE
+================================ */
+
+
+.employee-toggle-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    margin-top:20px;
+
+}
+
+
+.employee-toggle-card h3{
+
+    margin:0;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+
+.employee-toggle-card p{
+
+    margin-top:6px;
+
+    font-size:14px;
+
+    color:#64748b;
+
+}
+
+
+
+/* SWITCH */
+
+
+.switch{
+
+    position:relative;
+
+    width:52px;
+
+    height:28px;
+
+}
+
+
+.switch input{
+
+    opacity:0;
+
+    width:0;
+
+    height:0;
+
+}
+
+
+
+.slider{
+
+    position:absolute;
+
+    cursor:pointer;
+
+    inset:0;
+
+    background:#cbd5e1;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+
+
+.slider:before{
+
+    content:"";
+
+    position:absolute;
+
+    height:22px;
+
+    width:22px;
+
+    left:3px;
+
+    bottom:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transition:.3s;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.2);
+
+}
+
+
+
+.switch input:checked + .slider{
+
+    background:#2563eb;
+
+}
+
+
+
+.switch input:checked + .slider:before{
+
+    transform:translateX(24px);
+
+}
+
+
+
+/* =====================================================
+   QUEUEFLOW — PROFESSIONAL FLOW SETUP UPGRADE
+   Add this at the VERY END of setup.css
+===================================================== */
+
+
+/* ===============================
+   FLOW PAGE BACKGROUND
+================================ */
+
+.setup-container {
+    position: relative;
+    padding: 42px 20px 50px;
+}
+
+
+/* ===============================
+   PROFESSIONAL PAGE HEADER
+================================ */
+
+.setup-container h1 {
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+}
+
+.setup-container > p.setup-description {
+    max-width: 680px;
+    line-height: 1.7;
+}
+
+
+/* ===============================
+   FLOW GRID
+================================ */
+
+.flow-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 10px;
+}
+
+
+/* ===============================
+   PROFESSIONAL FLOW CARDS
+================================ */
+
+.flow-card {
+    position: relative;
+    min-height: 330px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f8fafc 100%
+        );
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.05);
+
+    overflow: hidden;
+
+    text-align: left;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+}
+
+
+/* subtle decorative glow */
+
+.flow-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    top: -80px;
+    right: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, .06);
+
+    pointer-events: none;
+}
+
+
+/* card hover */
+
+.flow-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.10);
+
+    border-color: #cbd5e1;
+}
+
+
+/* ===============================
+   FLOW CARD TITLE
+================================ */
+
+.flow-card h2 {
+    position: relative;
+
+    margin: 0 0 10px;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    color: #0f172a;
+
+    letter-spacing: -.3px;
+}
+
+
+/* ===============================
+   FLOW CARD DESCRIPTION
+================================ */
+
+.flow-card > p {
+    position: relative;
+
+    margin: 0 0 22px;
+
+    color: #64748b;
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* ===============================
+   FLOW EXAMPLE
+================================ */
+
+.flow-example {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 105px;
+
+    margin: 5px 0 22px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background: #f1f5f9;
+
+    border: 1px solid #e2e8f0;
+
+    color: #334155;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* ===============================
+   CARD BOTTOM DESCRIPTION
+================================ */
+
+.flow-card > span {
+    position: relative;
+
+    display: block;
+
+    margin-top: auto;
+
+    padding-top: 16px;
+
+    border-top: 1px solid #e5e7eb;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ===============================
+   FIXED FLOW ACTIVE
+================================ */
+
+.flow-card.active-blue {
+    border-color: #2563eb;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #eff6ff 100%
+        );
+
+    box-shadow:
+        0 15px 40px rgba(37, 99, 235, .13),
+        0 0 0 3px rgba(37, 99, 235, .08);
+}
+
+
+/* active blue top indicator */
+
+.flow-card.active-blue::after {
+    content: "SELECTED";
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: .7px;
+}
+
+
+/* ===============================
+   FLEXIBLE FLOW ACTIVE
+================================ */
+
+.flow-card.active-green {
+    border-color: #16a34a;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f0fdf4 100%
+        );
+
+    box-shadow:
+        0 15px 40px rgba(22, 163, 74, .13),
+        0 0 0 3px rgba(22, 163, 74, .08);
+}
+
+
+.flow-card.active-green::after {
+    content: "SELECTED";
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background: #16a34a;
+    color: white;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: .7px;
+}
+
+
+/* ===============================
+   CURRENT SELECTION
+================================ */
+
+.current-flow {
+    margin-top: 28px;
+
+    padding: 24px 26px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e2e8f0;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, .04);
+}
+
+
+.current-flow h3 {
+    margin: 0 0 18px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    color: #0f172a;
+
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+
+.current-flow p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 10px 0;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.current-flow strong {
+    color: #0f172a;
+    font-weight: 800;
+}
+
+
+/* ===============================
+   FLOW VALUE COLORS
+================================ */
+
+.current-flow p:last-child strong {
+    color: #2563eb;
+}
+
+
+/* ===============================
+   ACTION BAR
+================================ */
+
+.setup-actions {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 30px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+/* ===============================
+   PROFESSIONAL BUTTONS
+================================ */
+
+.primary-btn,
+.secondary-btn {
+    min-width: 150px;
+
+    min-height: 48px;
+
+    padding: 0 24px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.primary-btn {
+    border: 1px solid #2563eb;
+
+    background: #2563eb;
+
+    color: white;
+
+    box-shadow:
+        0 6px 16px rgba(37, 99, 235, .20);
+}
+
+
+.primary-btn:hover:not(:disabled) {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(37, 99, 235, .25);
+}
+
+
+.secondary-btn {
+    border: 1px solid #d1d5db;
+
+    background: white;
+
+    color: #475569;
+}
+
+
+.secondary-btn:hover:not(:disabled) {
+    background: #f8fafc;
+
+    border-color: #94a3b8;
+
+    color: #0f172a;
+}
+
+
+/* ===============================
+   LOADING STATE
+================================ */
+
+.setup-loading {
+    min-height: 420px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #64748b;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* ===============================
+   RESPONSIVE FLOW CARDS
+================================ */
+
+@media (max-width: 800px) {
+
+    .flow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-card {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .setup-container {
+        padding: 25px 15px 40px;
+    }
+
+    .setup-container h1 {
+        font-size: 28px;
+    }
+
+    .flow-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .current-flow p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .setup-actions {
+        flex-direction: column-reverse;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+}
+
+
+

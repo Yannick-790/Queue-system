@@ -1,0 +1,712 @@
+/* =========================================================
+   DESKS PAGE
+   ========================================================= */
+
+.desks-page {
+  min-height: 100%;
+  padding: 32px;
+  background: #f6f8fb;
+  color: #172033;
+  box-sizing: border-box;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.desks-header {
+  margin-bottom: 28px;
+}
+
+.desks-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.desks-title-area {
+  min-width: 0;
+}
+
+.desks-eyebrow,
+.desk-section-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.desks-title-area h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.desks-title-area p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.desk-btn {
+  min-height: 42px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease,
+    background 0.15s ease;
+  white-space: nowrap;
+}
+
+.desk-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.desk-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.desk-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.desk-btn-primary {
+  color: #ffffff;
+  background: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.desk-btn-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+.desk-btn-secondary {
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+}
+
+.desk-btn-secondary:hover:not(:disabled) {
+  background: #f8fafc;
+}
+
+.desk-btn-success {
+  color: #ffffff;
+  background: #16a34a;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.18);
+}
+
+.desk-btn-success:hover:not(:disabled) {
+  background: #15803d;
+}
+
+/* =========================================================
+   FORM CARDS
+   ========================================================= */
+
+.desk-form-card {
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  border-radius: 14px;
+  box-shadow:
+    0 3px 12px rgba(15, 23, 42, 0.04),
+    0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+.desk-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.desk-form-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.desk-form-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.desk-form-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.desk-form-group {
+  min-width: 220px;
+  flex: 1;
+}
+
+.desk-form-group-wide {
+  flex: 2;
+}
+
+.desk-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.desk-form-group input,
+.desk-form-group select {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  outline: none;
+  font-size: 13px;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.desk-form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.desk-form-group input:focus,
+.desk-form-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.desk-form-action {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 0;
+}
+
+.assigning-desk-badge {
+  padding: 9px 13px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   TABLE CARD
+   ========================================================= */
+
+.desk-table-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  border-radius: 14px;
+  box-shadow:
+    0 3px 12px rgba(15, 23, 42, 0.04),
+    0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+.desk-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  border-bottom: 1px solid #e8edf3;
+}
+
+.desk-table-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.desk-count {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 11px;
+  color: #475569;
+  background: #f1f5f9;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.desk-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.desk-table {
+  width: 100%;
+  min-width: 1150px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.desk-table thead {
+  background: #f8fafc;
+}
+
+.desk-table th {
+  height: 46px;
+  padding: 0 16px;
+  color: #64748b;
+  border-bottom: 1px solid #e5eaf0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.desk-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #edf1f5;
+  color: #334155;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.desk-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.desk-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.desk-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* =========================================================
+   DESK NAME
+   ========================================================= */
+
+.desk-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 130px;
+}
+
+.desk-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.desk-name-cell strong {
+  display: block;
+  color: #172033;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.desk-name-cell span {
+  display: block;
+  margin-top: 3px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+/* =========================================================
+   LOCATION / DEPARTMENT
+   ========================================================= */
+
+.desk-location {
+  color: #475569;
+  font-weight: 600;
+}
+
+.desk-department {
+  display: inline-block;
+  padding: 5px 9px;
+  color: #475569;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   EMPLOYEE
+   ========================================================= */
+
+.desk-employee-cell {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 170px;
+}
+
+.employee-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  color: #ffffff;
+  background: #334155;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.desk-employee-cell strong {
+  display: block;
+  max-width: 140px;
+  overflow: hidden;
+  color: #172033;
+  font-size: 12px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.desk-employee-cell span {
+  display: block;
+  max-width: 140px;
+  margin-top: 2px;
+  overflow: hidden;
+  color: #94a3b8;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.not-assigned {
+  color: #94a3b8;
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* =========================================================
+   SERVICE
+   ========================================================= */
+
+.service-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  color: #7c3aed;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.employee-service-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  color: #0369a1;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.desk-status-select {
+  height: 32px;
+  padding: 0 9px;
+  border-radius: 7px;
+  outline: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.desk-status-available {
+  color: #15803d;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.desk-status-busy {
+  color: #b45309;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+}
+
+.desk-status-offline {
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.desk-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  min-width: 250px;
+}
+
+.desk-action-btn {
+  min-height: 30px;
+  padding: 0 9px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.desk-action-btn:hover {
+  transform: translateY(-1px);
+}
+
+.desk-action-assign {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.desk-action-assign:hover {
+  background: #dbeafe;
+}
+
+.desk-action-release {
+  color: #b45309;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+}
+
+.desk-action-release:hover {
+  background: #fef3c7;
+}
+
+.desk-action-edit {
+  color: #475569;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+}
+
+.desk-action-edit:hover {
+  background: #f1f5f9;
+}
+
+.desk-action-delete {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.desk-action-delete:hover {
+  background: #fee2e2;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.desk-empty-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow:
+    0 3px 12px rgba(15, 23, 42, 0.04),
+    0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+.desk-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 16px;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.desk-empty-card h3 {
+  margin: 0;
+  color: #172033;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.desk-empty-card p {
+  max-width: 400px;
+  margin: 8px 0 20px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.desk-loading-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 220px;
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  border-radius: 14px;
+  color: #64748b;
+  box-shadow:
+    0 3px 12px rgba(15, 23, 42, 0.04),
+    0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+.desk-loading-card p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.desk-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: desk-spin 0.75s linear infinite;
+}
+
+@keyframes desk-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .desks-page {
+    padding: 22px;
+  }
+
+  .desks-header-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .desk-form-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .desk-form-group {
+    width: 100%;
+  }
+
+  .desk-form-action {
+    padding-top: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .desks-page {
+    padding: 16px;
+  }
+
+  .desks-title-area h1 {
+    font-size: 24px;
+  }
+
+  .desk-form-card {
+    padding: 18px;
+  }
+
+  .desk-form-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .desk-table-header {
+    padding: 18px;
+  }
+}

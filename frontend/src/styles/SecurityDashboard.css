@@ -1,0 +1,945 @@
+/* ============================================================
+   QUEUEFLOW — SECURITY OPERATIONS DASHBOARD
+   Professional security / reception interface
+   ============================================================ */
+
+:root {
+  --security-bg: #f5f7fb;
+  --security-surface: #ffffff;
+  --security-surface-soft: #f8fafc;
+
+  --security-text: #101828;
+  --security-text-soft: #667085;
+  --security-text-muted: #98a2b3;
+
+  --security-border: #e4e7ec;
+
+  --security-primary: #2563eb;
+  --security-primary-dark: #1d4ed8;
+  --security-primary-soft: #eff6ff;
+
+  --security-success: #16a34a;
+  --security-success-dark: #15803d;
+  --security-success-soft: #f0fdf4;
+
+  --security-purple: #7c3aed;
+  --security-purple-soft: #f5f3ff;
+
+  --security-warning: #d97706;
+  --security-warning-soft: #fffbeb;
+
+  --security-danger: #dc2626;
+  --security-danger-soft: #fef2f2;
+
+  --security-radius-sm: 8px;
+  --security-radius: 14px;
+  --security-radius-lg: 20px;
+
+  --security-shadow-sm:
+    0 1px 3px rgba(16, 24, 40, 0.05);
+
+  --security-shadow:
+    0 8px 24px rgba(16, 24, 40, 0.06);
+
+  --security-shadow-lg:
+    0 18px 45px rgba(16, 24, 40, 0.08);
+
+  --security-transition: 160ms ease;
+}
+
+
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.security-dashboard {
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 36px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(37, 99, 235, 0.045),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #f8fafc 0%,
+      var(--security-bg) 100%
+    );
+
+  color: var(--security-text);
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.security-header {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto 26px;
+}
+
+
+.security-header-content {
+  min-height: 120px;
+
+  padding: 28px 30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  background: var(--security-surface);
+
+  border: 1px solid var(--security-border);
+
+  border-radius: var(--security-radius-lg);
+
+  box-shadow: var(--security-shadow);
+}
+
+
+/* ============================================================
+   HEADER TEXT
+   ============================================================ */
+
+.security-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: var(--security-primary);
+
+  font-size: 11px;
+  font-weight: 850;
+
+  letter-spacing: 0.15em;
+}
+
+
+.security-header h1 {
+  margin: 0;
+
+  color: var(--security-text);
+
+  font-size: clamp(28px, 3vw, 38px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.04em;
+}
+
+
+.security-header p {
+  margin: 9px 0 0;
+
+  max-width: 650px;
+
+  color: var(--security-text-soft);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   SECURITY STATUS
+   ============================================================ */
+
+.security-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 175px;
+
+  padding: 13px 16px;
+
+  background: var(--security-success-soft);
+
+  border: 1px solid #bbf7d0;
+
+  border-radius: 12px;
+}
+
+
+.security-status-dot {
+  width: 10px;
+  height: 10px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--security-success);
+
+  box-shadow:
+    0 0 0 5px rgba(22, 163, 74, 0.10);
+}
+
+
+.security-status div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.security-status strong {
+  font-size: 13px;
+
+  font-weight: 750;
+
+  color: var(--security-text);
+}
+
+
+.security-status span {
+  font-size: 12px;
+
+  color: var(--security-success-dark);
+}
+
+
+/* ============================================================
+   OVERVIEW
+   ============================================================ */
+
+.security-overview {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto 26px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+.security-stat-card {
+  min-height: 88px;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  background: var(--security-surface);
+
+  border: 1px solid var(--security-border);
+
+  border-radius: var(--security-radius);
+
+  box-shadow: var(--security-shadow-sm);
+
+  transition:
+    transform var(--security-transition),
+    box-shadow var(--security-transition),
+    border-color var(--security-transition);
+}
+
+
+.security-stat-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d0d5dd;
+
+  box-shadow: var(--security-shadow);
+}
+
+
+/* ============================================================
+   STAT ICON
+   ============================================================ */
+
+.security-stat-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  letter-spacing: 0.06em;
+}
+
+
+.security-stat-icon.blue {
+  background: var(--security-primary-soft);
+
+  color: var(--security-primary);
+}
+
+
+.security-stat-icon.purple {
+  background: var(--security-purple-soft);
+
+  color: var(--security-purple);
+}
+
+
+.security-stat-icon.green {
+  background: var(--security-success-soft);
+
+  color: var(--security-success-dark);
+}
+
+
+.security-stat-card > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.security-stat-card span {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: var(--security-text-muted);
+}
+
+
+.security-stat-card strong {
+  font-size: 14px;
+
+  font-weight: 750;
+
+  color: var(--security-text);
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.security-content {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+/* ============================================================
+   PANEL
+   ============================================================ */
+
+.security-panel {
+  width: 100%;
+
+  background: var(--security-surface);
+
+  border: 1px solid var(--security-border);
+
+  border-radius: var(--security-radius-lg);
+
+  box-shadow: var(--security-shadow);
+
+  overflow: hidden;
+
+  animation: securityPanelIn 220ms ease;
+}
+
+
+@keyframes securityPanelIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================================================
+   PANEL HEADER
+   ============================================================ */
+
+.security-panel-header {
+  min-height: 100px;
+
+  padding: 23px 26px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fbfcfe
+    );
+
+  border-bottom: 1px solid var(--security-border);
+}
+
+
+.security-section-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--security-primary);
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  letter-spacing: 0.14em;
+}
+
+
+.security-panel-header h2 {
+  margin: 0;
+
+  color: var(--security-text);
+
+  font-size: 20px;
+
+  font-weight: 780;
+
+  letter-spacing: -0.025em;
+}
+
+
+.security-panel-header p {
+  margin: 6px 0 0;
+
+  color: var(--security-text-soft);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   PANEL NUMBER
+   ============================================================ */
+
+.panel-number {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: var(--security-primary-soft);
+
+  color: var(--security-primary);
+
+  font-size: 11px;
+
+  font-weight: 850;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* ============================================================
+   PANEL BODY
+   ============================================================ */
+
+.security-panel-body {
+  padding: 26px;
+}
+
+
+/*
+   IMPORTANT:
+   Your GiveCard / CreateTicket / ReturnCard currently have
+   their own plain <div>, <table>, <select>, and <button>.
+   These rules make those existing elements look professional
+   without changing their business logic.
+*/
+
+
+/* ============================================================
+   COMPONENT HEADINGS
+   ============================================================ */
+
+.security-panel-body h1 {
+  margin: 0 0 20px;
+
+  color: var(--security-text);
+
+  font-size: 18px;
+
+  font-weight: 750;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+
+.security-panel-body table {
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid var(--security-border);
+
+  border-radius: 12px;
+}
+
+
+.security-panel-body thead {
+  background: #f8fafc;
+}
+
+
+.security-panel-body th {
+  padding: 13px 16px;
+
+  border-bottom: 1px solid var(--security-border);
+
+  color: var(--security-text-muted);
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+
+.security-panel-body td {
+  padding: 15px 16px;
+
+  border-bottom: 1px solid #f0f2f5;
+
+  color: var(--security-text-soft);
+
+  font-size: 13px;
+}
+
+
+.security-panel-body tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+.security-panel-body tbody tr {
+  transition:
+    background var(--security-transition);
+}
+
+
+.security-panel-body tbody tr:hover {
+  background: #f8fafc;
+}
+
+
+.security-panel-body td:first-child {
+  color: var(--security-text);
+
+  font-weight: 750;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.security-panel-body td:nth-child(2) {
+  color: var(--security-success-dark);
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.security-panel-body button {
+  min-height: 40px;
+
+  padding: 0 16px;
+
+  border: 1px solid transparent;
+
+  border-radius: 9px;
+
+  background: var(--security-primary);
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--security-transition),
+    background var(--security-transition),
+    box-shadow var(--security-transition),
+    opacity var(--security-transition);
+}
+
+
+.security-panel-body button:hover:not(:disabled) {
+  background: var(--security-primary-dark);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(37, 99, 235, 0.20);
+}
+
+
+.security-panel-body button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+
+.security-panel-body button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   SELECTS
+   ============================================================ */
+
+.security-panel-body select {
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 0 14px;
+
+  margin-bottom: 12px;
+
+  box-sizing: border-box;
+
+  appearance: none;
+
+  background:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      #667085 50%
+    ) calc(100% - 18px) 20px / 6px 6px no-repeat,
+    linear-gradient(
+      135deg,
+      #667085 50%,
+      transparent 50%
+    ) calc(100% - 14px) 20px / 6px 6px no-repeat,
+    #ffffff;
+
+  border: 1px solid #d0d5dd;
+
+  border-radius: 10px;
+
+  color: var(--security-text);
+
+  font-size: 14px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    border-color var(--security-transition),
+    box-shadow var(--security-transition);
+}
+
+
+.security-panel-body select:hover {
+  border-color: #98a2b3;
+}
+
+
+.security-panel-body select:focus {
+  border-color: var(--security-primary);
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ============================================================
+   CREATE TICKET LAYOUT
+   ============================================================ */
+
+.security-panel-body select + select {
+  margin-top: 2px;
+}
+
+
+.security-panel-body select ~ button {
+  margin-top: 6px;
+
+  min-width: 170px;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.security-panel-body p {
+  color: var(--security-text-soft);
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   EMPTY TABLE
+   ============================================================ */
+
+.security-panel-body tbody:empty::after {
+  content: "No cards currently available.";
+
+  display: block;
+
+  padding: 30px;
+
+  color: var(--security-text-muted);
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   FOCUS
+   ============================================================ */
+
+.security-panel-body button:focus-visible,
+.security-panel-body select:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.18);
+
+  outline-offset: 2px;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .security-dashboard {
+    padding: 24px;
+  }
+
+  .security-header-content {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 24px;
+  }
+
+  .security-status {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .security-overview {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .security-dashboard {
+    padding: 14px;
+  }
+
+  .security-header {
+    margin-bottom: 16px;
+  }
+
+  .security-header-content {
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+  .security-header h1 {
+    font-size: 27px;
+  }
+
+  .security-header p {
+    font-size: 13px;
+  }
+
+  .security-panel {
+    border-radius: 16px;
+  }
+
+  .security-panel-header {
+    padding: 19px;
+
+    align-items: flex-start;
+  }
+
+  .security-panel-header h2 {
+    font-size: 18px;
+  }
+
+  .security-panel-body {
+    padding: 18px;
+  }
+
+  .security-panel-body table {
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+
+  .security-panel-body th,
+  .security-panel-body td {
+    padding: 12px 13px;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL PHONES
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+  .security-dashboard {
+    padding: 10px;
+  }
+
+  .security-header-content {
+    padding: 17px;
+  }
+
+  .security-stat-card {
+    padding: 15px;
+  }
+
+  .security-panel-header {
+    padding: 16px;
+  }
+
+  .security-panel-body {
+    padding: 15px;
+  }
+
+  .panel-number {
+    width: 32px;
+    height: 32px;
+  }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .security-panel {
+    animation: none;
+  }
+
+  .security-stat-card,
+  .security-panel-body button {
+    transition: none;
+  }
+
+}

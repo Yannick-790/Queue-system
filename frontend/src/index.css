@@ -1,0 +1,482 @@
+/* ================================
+   QueueFlow Global Design System
+   ================================ */
+
+
+:root {
+
+  /* Colors */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #0f172a;
+
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #d97706;
+  --info: #0284c7;
+
+
+  --background: #f8fafc;
+  --surface: #ffffff;
+
+  --text: #334155;
+  --heading: #0f172a;
+  --muted: #64748b;
+
+  --border: #e2e8f0;
+
+
+  /* Shadows */
+  --shadow-sm:
+    0 1px 2px rgba(0,0,0,0.05);
+
+  --shadow:
+    0 10px 25px rgba(15,23,42,0.08);
+
+  --shadow-lg:
+    0 20px 40px rgba(15,23,42,0.12);
+
+
+
+  /* Radius */
+
+  --radius-sm:8px;
+  --radius:12px;
+  --radius-lg:18px;
+
+
+
+  /* Spacing */
+
+  --container:1400px;
+
+
+
+  /* Animation */
+
+  --transition:
+  all .25s ease;
+
+
+
+  font-family:
+  Inter,
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+
+
+  color:var(--text);
+
+  background:
+  var(--background);
+
+
+  font-synthesis:none;
+
+  text-rendering:
+  optimizeLegibility;
+
+  -webkit-font-smoothing:
+  antialiased;
+
+}
+
+
+
+
+
+/* ================================
+   Reset
+================================ */
+
+
+*{
+
+box-sizing:border-box;
+
+margin:0;
+
+padding:0;
+
+}
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(
+135deg,
+#f8fafc,
+#eef2ff
+);
+
+color:var(--text);
+
+}
+
+
+
+/* ================================
+   Root Application
+================================ */
+
+
+#root{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+
+/* ================================
+ Typography
+================================ */
+
+
+h1,
+h2,
+h3,
+h4{
+
+color:var(--heading);
+
+font-weight:700;
+
+letter-spacing:-0.02em;
+
+}
+
+
+
+h1{
+
+font-size:2.2rem;
+
+}
+
+
+
+h2{
+
+font-size:1.6rem;
+
+}
+
+
+
+p{
+
+line-height:1.6;
+
+}
+
+
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+transition:var(--transition);
+
+}
+
+
+
+
+
+/* ================================
+ Buttons
+================================ */
+
+
+button{
+
+font-family:inherit;
+
+cursor:pointer;
+
+border:none;
+
+transition:var(--transition);
+
+}
+
+
+
+button:hover{
+
+transform:
+translateY(-2px);
+
+}
+
+
+
+button:active{
+
+transform:
+scale(.97);
+
+}
+
+
+
+
+
+/* ================================
+ Inputs
+================================ */
+
+
+input,
+select,
+textarea{
+
+
+font-family:inherit;
+
+font-size:15px;
+
+border:
+
+1px solid var(--border);
+
+border-radius:
+var(--radius);
+
+padding:
+12px 15px;
+
+outline:none;
+
+background:white;
+
+transition:var(--transition);
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus{
+
+border-color:
+var(--primary);
+
+box-shadow:
+0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+
+
+
+
+/* ================================
+ Cards
+================================ */
+
+
+.card{
+
+background:
+var(--surface);
+
+border:
+
+1px solid var(--border);
+
+border-radius:
+
+var(--radius-lg);
+
+box-shadow:
+
+var(--shadow);
+
+padding:
+
+24px;
+
+transition:
+
+var(--transition);
+
+}
+
+
+
+.card:hover{
+
+box-shadow:
+
+var(--shadow-lg);
+
+transform:
+
+translateY(-4px);
+
+}
+
+
+
+
+
+/* ================================
+ Images
+================================ */
+
+
+img{
+
+max-width:100%;
+
+display:block;
+
+object-fit:cover;
+
+}
+
+
+
+
+
+/* ================================
+ Loader Animation
+================================ */
+
+
+@keyframes spin{
+
+
+from{
+
+transform:
+rotate(0deg);
+
+}
+
+
+to{
+
+transform:
+rotate(360deg);
+
+}
+
+
+}
+
+
+
+.loader{
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+border:
+
+4px solid #e2e8f0;
+
+border-top-color:
+
+var(--primary);
+
+animation:
+
+spin .8s linear infinite;
+
+}
+
+
+
+
+
+/* ================================
+ Scrollbar
+================================ */
+
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+background:#f1f5f9;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+background:#94a3b8;
+
+border-radius:20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#64748b;
+
+}
+
+
+
+
+
+/* ================================
+ Responsive
+================================ */
+
+
+@media(max-width:768px){
+
+
+h1{
+
+font-size:1.8rem;
+
+}
+
+
+h2{
+
+font-size:1.3rem;
+
+}
+
+
+}

@@ -1,0 +1,3986 @@
+I do feel you. You're changing from "selling a machine" to "selling a service." That's a smarter direction because it requires less money from you.
+
+Here's how I'd structure it.
+
+Business Model
+
+You don't sell TVs.
+
+You don't sell tablets unless the client asks.
+
+You sell:
+
+✅ Queue management software
+✅ Setup and installation
+✅ Numbered reusable cards
+✅ Staff training
+✅ Technical support
+
+If the client already has:
+
+TV ✅
+Computer ✅
+Reception PC ✅
+
+You simply install your software.
+
+What the client buys
+Basic Package
+
+Includes:
+
+Queue software
+100 reusable numbered cards
+Installation
+Staff training
+
+Uses:
+
+Their TV
+Their receptionist computers
+Standard Package
+
+Everything above plus:
+
+Card scanner (QR or RFID)
+Better reporting
+Voice announcements
+Premium Package
+
+Everything above plus:
+
+You supply TVs
+Touchscreen kiosk
+Extra reception displays
+Networking
+Installation
+
+Only if they want it.
+
+Subscription
+
+I actually think a subscription can work if it includes real value.
+
+Don't say:
+
+"Pay 20,000 RWF just because."
+
+Instead say:
+
+For 20,000 RWF/month, you get:
+
+Unlimited technical support
+Software updates
+Backup of queue data
+New features
+Remote troubleshooting
+Phone support
+Replacement software if the computer crashes
+
+Now they're paying for a service, not just software.
+
+One-time installation
+
+Example:
+
+Installation:
+200,000 RWF
+
+Monthly:
+20,000 RWF
+
+The monthly fee keeps the system maintained.
+
+Your costs
+
+You buy:
+
+100 plastic cards
+QR stickers or printed cards
+Software development (your time)
+Website (optional)
+Domain name
+Support
+
+Notice something?
+
+You don't need to buy:
+
+TVs
+Tablets
+Office computers
+
+The client already has them.
+
+That means your business has much lower upfront costs.
+
+Your workflow
+Visit the client.
+Count the reception desks.
+Check what equipment they already have.
+Install the software.
+Give them the numbered cards.
+Train the staff (about an hour).
+Leave the system running.
+Provide support when needed.
+Future upgrades (extra income)
+
+Later you can offer:
+
+SMS notifications
+Online appointments
+Customer satisfaction surveys
+Reports and analytics
+Multiple branches connected together
+Mobile app for managers
+
+Each of these can be an optional paid upgrade.
+
+I would change one thing
+
+Instead of advertising:
+
+"Queue Management System"
+
+I'd advertise something like:
+
+Customer Flow & Reception Management
+
+Why?
+
+Because later you can add:
+
+Appointments
+Check-in
+Queueing
+Cashier tracking
+Reports
+Branch management
+
+Now you're selling a business management platform, not just a queue display.
+
+One caution about the subscription
+
+A monthly fee is easiest to justify if you're continuously providing value. For example:
+
+Cloud backups.
+Remote monitoring.
+Automatic software updates.
+Fast technical support.
+New features over time.
+
+If the software is installed once, never changes, and requires no support, many customers will ask, "Why am I paying every month?"
+
+A model that often works well is:
+
+One-time setup fee (installation, configuration, cards, training).
+Optional monthly support plan (updates, remote help, maintenance).
+Paid upgrades when they want new features.
+
+That gives customers a choice while creating recurring income for your business.
+
+
+
+
+
+
+
+Company Service
+
+We help businesses organize customer flow using a digital queue management system.
+
+That's the service.
+
+What problems do you solve?
+
+Imagine a clinic today.
+
+Problems:
+
+❌ Customers argue about who came first.
+❌ Receptionists shout names.
+❌ People crowd around the desk.
+❌ Staff waste time answering "Who's next?"
+❌ Managers don't know how many customers were served.
+
+Your service solves those.
+
+What do you install?
+
+You install:
+
+Queue management software.
+Reception dashboard.
+Waiting display (using their TV if they have one).
+Customer ticket/card system.
+Reports.
+Staff accounts.
+What do customers pay for?
+
+Not the cards.
+
+They pay because:
+
+Their business becomes organized.
+Waiting becomes fair.
+Staff work faster.
+Customers are happier.
+Managers get reports.
+Your first service
+
+I would define it like this:
+
+Digital Queue & Customer Flow Management
+
+Included:
+
+Installation
+Configuration
+Staff training
+Numbered reusable cards
+Reception software
+Display software
+Technical support
+Future services
+
+Once people trust you, you can add:
+
+CCTV installation
+Access control (doors/cards)
+Network installation
+Wi-Fi installation
+Attendance systems
+Digital signage
+Appointment booking
+Queue management
+
+Now you're becoming a business technology company, not just someone who sells one product.
+
+My recommendation
+
+Don't create a company that depends on only one product.
+
+Instead, build a company that helps organizations use technology to run more efficiently.
+
+Your queue management system can be the first product that gets you into a client. Once you're there, you can offer other services they need, such as networking, cameras, access control, or software upgrades. That gives you more opportunities to grow the business over time.
+
+
+
+
+
+
+
+
+
+
+Yes, I understand what you mean. You want the physical card movement to also be tracked, not only the customer queue.
+
+The final workflow should separate two things:
+
+Customer queue status (who is waiting, who is being served)
+Card status (where is the physical card)
+
+Let's design the complete workflow.
+
+Final Queue Workflow
+1. Card starts with security
+
+Example:
+
+Card 023:
+
+Card Status:
+AVAILABLE_AT_SECURITY
+
+Security has the physical card.
+
+2. New customer arrives
+
+Security gives card 023.
+
+Security clicks:
+
+NEW CUSTOMER
+
+or scans the card.
+
+System creates:
+
+Customer:
+Queue number: 145
+Card: 023
+
+Customer Status:
+WAITING
+
+Card Status:
+WITH_CUSTOMER
+
+Now the system knows:
+
+Customer 145 is waiting
+Card 023 is outside with customer
+3. Reception desk requests next customer
+
+Desk 1 clicks:
+
+CALL NEXT
+
+System checks:
+
+Customers where status = WAITING
+Order by arrival time
+
+Finds:
+
+Customer 145
+Card 023
+
+System changes:
+
+Customer Status:
+WAITING → SERVING
+
+Assigned Desk:
+Desk 1
+
+Display:
+
+023
+PLEASE GO TO DESK 1
+
+Voice:
+
+"Customer 023, please go to desk 1."
+
+4. Customer arrives at desk
+
+Receptionist sees:
+
+NOW SERVING
+
+023
+
+No scan needed.
+
+The system already knows:
+
+Desk 1 = Customer 145 = Card 023
+5. Customer finishes
+
+Receptionist clicks:
+
+FINISH
+
+System changes:
+
+Customer:
+
+SERVING → COMPLETED
+
+Card:
+
+WITH_CUSTOMER → RETURN_REQUIRED
+
+Now the system knows:
+
+"Service is finished, but the card is not yet back."
+
+6. Customer returns card to security
+
+Security receives card 023.
+
+Security scans it.
+
+System asks:
+
+Confirm returned?
+
+Security clicks:
+
+RECEIVED
+
+Now:
+
+Card status:
+
+RETURN_REQUIRED → AVAILABLE_AT_SECURITY
+
+The card can now be reused.
+
+7. Next customer arrives
+
+Security does not need to search.
+
+System sees:
+
+Available cards:
+
+023
+045
+067
+
+Security gives the next available card.
+
+Scan:
+
+Card 023
+
+System creates the new queue entry.
+
+Final database states
+
+Example:
+
+Customer Table
+Customer	Card	Status
+145	023	Completed
+146	045	Waiting
+147	067	Waiting
+Card Table
+Card	Status
+023	Available at security
+045	With customer
+067	With customer
+
+This design is better because if a card disappears, you know:
+
+Who had it last
+When it was issued
+Whether it was returned
+
+And the queue still works correctly because the arrival time decides the order, not the card number.
+
+
+
+
+
+
+
+Yes, your correction is better. The security role should be simple: issue cards and receive returned cards. The queue logic stays inside the software.
+
+The workflow becomes:
+
+1. New customer arrives
+
+Security clicks:
+
+NEW CUSTOMER
+
+The system checks available cards:
+
+Available cards:
+001
+002
+003
+...
+
+It assigns the next available card:
+
+Customer Queue Number: 145
+Card: 023
+Status: WAITING
+
+Security gives card 023 to the customer.
+
+Card status:
+
+AVAILABLE_AT_SECURITY
+        ↓
+WITH_CUSTOMER
+
+No scanning is required if the system automatically assigns the card.
+
+2. Reception calls customer
+
+Reception clicks:
+
+CALL NEXT
+
+System finds the oldest waiting customer:
+
+Queue 145
+Card 023
+
+Changes:
+
+WAITING → SERVING
+
+Display:
+
+023
+Desk 1
+3. Customer finishes
+
+Reception clicks:
+
+FINISHED
+
+Customer:
+
+SERVING → COMPLETED
+
+Card:
+
+WITH_CUSTOMER → RETURN_PENDING
+
+The system now knows:
+
+"Card 023 should come back."
+
+4. Customer returns card
+
+The customer gives card 023 to security.
+
+Because the card itself has:
+
+023
+
+written on it (or QR code), security knows which card it is.
+
+Security does:
+
+Option A:
+
+Manual:
+
+RETURN CARD
+Enter: 023
+Confirm
+
+Option B (better):
+
+Scan card:
+
+SCAN CARD 023
+
+System shows:
+
+Card 023 belongs to completed customer
+
+Mark as received?
+[YES]
+
+Security clicks:
+
+RECEIVED
+
+Now:
+
+RETURN_PENDING
+        ↓
+AVAILABLE_AT_SECURITY
+
+The card can be assigned again.
+
+So the final idea:
+
+New customer: system assigns a card.
+Reception: only manages customers.
+Security: manages physical cards.
+Scanning is mainly for returning cards and preventing mistakes.
+
+This keeps the system simple and avoids forcing every receptionist to scan cards.
+
+
+
+
+
+
+
+
+
+
+
+Yes, now you are thinking like a real operational system. The software should not only track queues; it should also help staff manage lost, delayed, or forgotten cards.
+
+After the customer finishes, the card enters:
+
+RETURN_PENDING
+
+Now the system starts a timer.
+
+Card Return Monitoring Workflow
+1. Customer finishes
+
+Reception clicks:
+
+FINISH
+
+System:
+
+Card 023
+Status: RETURN_PENDING
+Time started: 10:35
+2. After 5 minutes
+
+System checks:
+
+Has card 023 been returned?
+
+If NO:
+
+Security notification:
+
+⚠ Card 023 has not been returned.
+
+Customer finished:
+10:35
+
+Waiting:
+5 minutes
+3. Security action
+
+Security dashboard:
+
+Pending returns:
+
+Card 023
+Location:
+Desk 1
+
+Actions:
+[Check]
+[Mark Received]
+[Lost]
+
+Security can:
+
+Check around reception area
+Ask customer if still nearby
+Confirm the card is back
+More useful features
+1. Card history
+
+Every card keeps a history:
+
+Example:
+
+Card 023
+
+09:00 Issued
+09:20 Desk 2
+09:35 Completed
+09:40 Returned
+
+If a card disappears, you know its last location.
+
+2. Lost card process
+
+If the customer leaves with it:
+
+Security clicks:
+
+CARD LOST
+
+System:
+
+Card 023:
+LOST
+
+Do not assign again.
+
+Manager can later replace it.
+
+3. Long waiting customer alerts
+
+Not only cards.
+
+Example:
+
+Customer waiting too long:
+
+Customer 145
+Waiting time: 40 minutes
+
+Manager notification:
+
+High waiting time detected
+4. Staff performance
+
+Manager can see:
+
+Desk 1:
+Customers served: 80
+Average service time: 7 minutes
+
+Desk 2:
+Customers served: 65
+Average service time: 12 minutes
+5. Emergency controls
+
+Sometimes mistakes happen:
+
+Wrong number called
+Customer leaves
+Customer needs another department
+
+Buttons:
+
+Skip customer
+Transfer customer
+Cancel ticket
+Recall number
+
+Your complete system is becoming:
+
+Customer Flow + Card Tracking + Staff Operations + Analytics
+
+The card return reminder is actually a valuable feature because many real queue systems fail when the physical tickets/cards are not managed properly.
+
+
+
+
+
+Yes, now you are describing a multi-department queue system, not just a single queue. The important idea is:
+
+Each service department manages its own queue, but the system can transfer customers between departments when needed.
+
+Let's organize it.
+
+1. Each service provider belongs to a department
+
+Example building:
+
+Hospital Building
+
+Department A:
+Registration
+
+Department B:
+Laboratory
+
+Department C:
+Payment
+
+Each department has:
+
+Its own staff
+Its own desks
+Its own waiting queue
+Its own cards/customers
+2. Customer enters Department A
+
+Customer arrives.
+
+Security creates:
+
+Customer:
+Card: 023
+
+Current Department:
+A - Registration
+
+Status:
+WAITING
+
+Department A queue:
+
+001 → Customer 023
+002 → Customer 045
+003 → Customer 078
+3. Service provider in A finishes and sends customer to B
+
+Example:
+
+Registration officer says:
+
+"Customer needs Laboratory."
+
+Staff clicks:
+
+TRANSFER CUSTOMER
+
+Destination:
+Laboratory (Department B)
+
+The system changes:
+
+Before:
+
+Customer 023
+
+Department:
+A
+
+Status:
+COMPLETED
+
+After:
+
+Customer 023
+
+Department:
+B
+
+Status:
+WAITING
+4. Department B receives the customer
+
+Department B does not care about Department A's queue.
+
+It only sees:
+
+Laboratory Queue
+
+Next customers:
+
+023
+056
+089
+
+When a laboratory staff member clicks:
+
+CALL NEXT
+
+The system gives:
+
+Customer 023
+Card 023
+Go to Laboratory Desk 2
+5. Card handling between departments
+
+The card belongs to the customer journey, not a department.
+
+Example:
+
+Customer keeps card 023:
+
+Security
+      ↓
+Department A
+      ↓
+Department B
+      ↓
+Department C
+      ↓
+Return to Security
+
+The card follows the customer.
+
+6. If the customer loses the card or needs a new one
+
+The system can still identify the customer because:
+
+Customer ID
++
+Queue history
++
+Current department
+
+The physical card is only a helper.
+
+7. Different building situation
+
+If departments are in different buildings:
+
+Example:
+
+Building A
+Registration
+
+Building B
+Laboratory
+
+The system can show:
+
+Customer 023
+
+Next step:
+Go to Building B
+Laboratory waiting area
+8. The software must know:
+Department structure
+
+Example:
+
+Organization
+
+ ├── Building A
+ │     ├── Registration
+ │     └── Payment
+ │
+ └── Building B
+       ├── Laboratory
+       └── Consultation
+Service routes
+
+Example:
+
+Registration
+       ↓
+Consultation
+       ↓
+Laboratory
+       ↓
+Payment
+
+So the system knows where a customer can go next.
+
+The final concept is:
+
+One customer journey, many queues.
+
+A customer may move:
+
+Queue A
+  ↓
+Service A
+  ↓
+Queue B
+  ↓
+Service B
+  ↓
+Queue C
+
+but the system keeps the complete history.
+
+This is much closer to how large hospitals, banks, and government service centers operate.
+
+
+
+
+Company Setup Workflow
+Step 1 — Create Company
+
+Admin enters:
+
+Company Name
+Industry
+Buildings
+Departments
+
+Example:
+
+Hospital X
+Buildings: 2
+Departments: 5
+Step 2 — Choose Customer Routing Mode
+
+The system asks:
+
+"How do customers move between services?"
+Option 1: Fixed Flow
+
+The company has a clear process.
+
+Example:
+
+Hospital:
+
+Reception
+    ↓
+Doctor
+    ↓
+Laboratory
+    ↓
+Payment
+    ↓
+Pharmacy
+
+The system automatically sends customers.
+
+Option 2: No Fixed Flow
+
+Different customers need different services.
+
+Example:
+
+Government office:
+
+Services:
+
+ID Application
+Birth Certificate
+Payment
+Information
+Complaints
+
+The customer does not follow one path.
+
+The receptionist selects the required service.
+
+Step 3 — Create Services
+
+Admin adds:
+
+Service Name
+Department
+Building
+Number of desks
+
+Example:
+
+Cashier
+Department: Finance
+Building A
+
+Registration
+Department: Reception
+Building A
+
+Laboratory
+Department: Medical
+Building B
+Step 4 — Add Employees
+
+For every worker:
+
+Name
+Department
+Service provided
+Desk number
+
+Example:
+
+John
+
+Department:
+Finance
+
+Service:
+Cash Payment
+
+Desk:
+4
+Step 5 — Create Customer Workflow
+Mode A: Fixed Flow
+
+Customer arrives:
+
+Security creates ticket:
+
+Card: 002
+Current service:
+Reception
+Status:
+WAITING
+
+Reception finishes:
+
+Clicks:
+
+SEND NEXT SERVICE
+
+System knows:
+
+Reception → Cashier
+
+Customer automatically enters Cashier queue.
+
+Mode B: No Fixed Flow
+
+Customer arrives:
+
+Reception asks:
+
+"What service do you need?"
+
+Options:
+
+1. Payment
+2. Registration
+3. Complaint
+4. Information
+
+Reception selects:
+
+Payment
+
+System creates:
+
+Card:002
+
+Service:
+Payment
+
+Queue:
+Cashier
+
+Status:
+WAITING
+
+Now only cashiers see this customer.
+
+Worker Dashboard
+
+Each employee sees only their work.
+
+Example:
+
+Cashier:
+
+My Queue
+
+002
+005
+009
+
+[CALL NEXT]
+
+Laboratory:
+
+My Queue
+
+031
+044
+050
+Important Rule
+
+The system does not send customers randomly.
+
+It uses:
+
+Customer need
+       +
+Service availability
+       +
+Employee availability
+       +
+Company rules
+
+to decide where the customer goes.
+
+Final Architecture
+                 COMPANY
+
+                    |
+        --------------------------
+        |                        |
+   Fixed Flow              No Fixed Flow
+
+Customer path             Reception chooses
+is automatic              service needed
+
+
+        |                        |
+
+       Services + Employees + Queues
+
+                    |
+
+             Queue Engine
+
+                    |
+
+          Correct service provider
+
+This design lets your software work for:
+
+A small office (one service)
+A bank (many services)
+A hospital (complex flow)
+Government offices (mixed services)
+
+without rebuilding the system each time.
+
+
+
+
+
+
+
+Good. Now we combine everything into one complete system workflow. This will become the foundation before coding.
+
+The system has four main parts:
+
+Company configuration
+Customer journey
+Queue engine
+Card management
+COMPLETE QUEUE MANAGEMENT SYSTEM WORKFLOW
+PART 1 — COMPANY SETUP (First Installation)
+Step 1: Create Company Profile
+
+Admin enters:
+
+Company Name
+Industry
+Buildings
+Departments
+
+Example:
+
+Hospital X
+
+Building A
+Building B
+
+Departments:
+Reception
+Doctor
+Laboratory
+Payment
+Pharmacy
+Step 2: Define Customer Flow
+
+The system asks:
+
+Question:
+
+"How do customers move through your organization?"
+
+Option A — Fixed Flow
+
+The company has a standard process.
+
+Example:
+
+Hospital:
+
+Reception
+    ↓
+Doctor
+    ↓
+Laboratory
+    ↓
+Payment
+    ↓
+Pharmacy
+    ↓
+Finished
+
+The system automatically knows the next service.
+
+Option B — Flexible Flow
+
+No fixed order.
+
+Example:
+
+Government office:
+
+Customer arrives
+
+Needs:
+- ID
+- Payment
+- Certificate
+- Complaint
+
+Reception selects the service.
+
+The system sends the customer to the correct queue.
+
+Step 3: Create Services
+
+Admin creates services:
+
+Example:
+
+Service:
+Registration
+
+Department:
+Reception
+
+Building:
+A
+
+
+Service:
+Payment
+
+Department:
+Finance
+
+Building:
+A
+Step 4: Add Employees
+
+Each employee gets a profile.
+
+Example:
+
+Employee:
+John
+
+Department:
+Finance
+
+Service:
+Payment
+
+Desk:
+4
+
+The system knows:
+
+John
+    ↓
+Finance
+    ↓
+Payment
+    ↓
+Desk 4
+PART 2 — CUSTOMER ARRIVAL FLOW
+Step 1: Customer arrives
+
+Customer goes to security/reception.
+
+Security dashboard:
+
+NEW CUSTOMER
+
+RETURN CARD
+
+LOST CARD
+Step 2: Create Customer Ticket
+
+Security clicks:
+
+NEW CUSTOMER
+
+System checks:
+
+Available cards:
+001
+002
+003
+...
+
+Assigns:
+
+Customer ID:
+145
+
+Card:
+023
+
+Status:
+WAITING
+
+Card:
+
+AVAILABLE_AT_SECURITY
+          ↓
+WITH_CUSTOMER
+Step 3: Choose Customer Service
+
+Now depends on company setup.
+
+Case A — Fixed Flow
+
+System already knows:
+
+Start:
+Reception
+
+Customer enters:
+
+Reception Queue
+Case B — Flexible Flow
+
+Reception/security asks:
+
+"What service do you need?"
+
+Example:
+
+Customer says:
+
+"Payment"
+
+System creates:
+
+Customer:
+145
+
+Card:
+023
+
+Service:
+Payment
+
+Queue:
+Cashier
+
+Status:
+WAITING
+PART 3 — QUEUE ENGINE
+
+The queue engine decides who goes next.
+
+It checks:
+
+Customer requested service
++
+Department
++
+Available employees
++
+Desk availability
++
+Arrival time
+
+Example:
+
+Payment queue:
+
+023 arrived 09:00
+045 arrived 09:05
+067 arrived 09:10
+
+Cashier clicks:
+
+CALL NEXT
+
+System selects:
+
+023
+
+because he arrived first.
+
+PART 4 — SERVICE PROVIDER FLOW
+
+Employee dashboard:
+
+Example:
+
+Cashier:
+
+My Queue
+
+023
+045
+067
+
+
+[CALL NEXT]
+
+Employee clicks:
+
+CALL NEXT
+
+System changes:
+
+Before:
+
+WAITING
+
+After:
+
+SERVING
+
+Display:
+
+NOW SERVING
+
+023
+
+DESK 4
+
+Voice:
+
+"Customer number 023, please go to desk 4."
+
+PART 5 — FINISH OR TRANSFER
+
+After service:
+
+Employee chooses:
+
+FINISH
+
+OR
+
+TRANSFER
+Finish
+
+Example:
+
+Final payment.
+
+System:
+
+Customer:
+
+SERVING
+     ↓
+COMPLETED
+
+Card:
+
+WITH_CUSTOMER
+       ↓
+RETURN_PENDING
+
+Timer starts.
+
+Transfer
+
+Example:
+
+Doctor sends customer to laboratory.
+
+Employee clicks:
+
+TRANSFER
+
+Select:
+
+Laboratory
+
+System:
+
+Before:
+
+Department:
+Doctor
+
+After:
+
+Department:
+Laboratory
+
+Status:
+WAITING
+
+Customer enters laboratory queue.
+
+PART 6 — CARD RETURN MANAGEMENT
+
+Security dashboard:
+
+Pending Returns
+
+Card 023
+Finished:
+10:35
+
+Waiting:
+6 minutes
+
+After 5 minutes:
+
+Notification:
+
+⚠ Card 023 not returned
+Please check
+
+Security receives card:
+
+Scan:
+
+023
+
+System:
+
+Card belongs to completed customer
+
+Confirm received?
+
+Security:
+
+YES
+
+Card:
+
+RETURN_PENDING
+       ↓
+AVAILABLE_AT_SECURITY
+PART 7 — MONITORING & MANAGEMENT
+
+Manager dashboard:
+
+Live view
+Reception:
+5 waiting
+
+Payment:
+12 waiting
+
+Laboratory:
+7 waiting
+Reports
+Customers served today:
+450
+
+Average waiting:
+12 minutes
+
+Average service:
+8 minutes
+
+Lost cards:
+2
+
+Busy department:
+Payment
+FINAL SYSTEM LOGIC
+
+The complete journey:
+
+CUSTOMER ARRIVES
+
+        ↓
+
+CARD ASSIGNED
+
+        ↓
+
+SERVICE SELECTED
+(Fixed Flow OR Reception Choice)
+
+        ↓
+
+CORRECT QUEUE
+
+        ↓
+
+AVAILABLE EMPLOYEE CALLS NEXT
+
+        ↓
+
+SERVICE HAPPENS
+
+        ↓
+
+FINISH OR TRANSFER
+
+        ↓
+
+NEXT SERVICE QUEUE (if needed)
+
+        ↓
+
+CUSTOMER FINISHES ALL SERVICES
+
+        ↓
+
+CARD RETURNED
+
+        ↓
+
+CARD AVAILABLE AGAIN
+
+This is now the complete blueprint: Customer Flow + Multi-Service Routing + Employee Management + Card Tracking + Analytics.
+
+
+
+
+
+
+
+Good point. Security is not only for giving and receiving cards. In a real organization, security/reception control is the first point of customer flow management, so the system should help them handle exceptions.
+
+Let's add a Security Operations Module.
+
+SECURITY DASHBOARD WORKFLOW
+
+Security sees:
+
+CUSTOMER CONTROL
+
+[NEW CUSTOMER]
+
+[CARD RETURNS]
+
+[PENDING CUSTOMERS]
+
+[PROBLEMS]
+
+[SEARCH CUSTOMER]
+1. Delayed Customer (Customer not moving)
+
+There are different cases.
+
+Case A: Customer received card but has not entered service yet
+
+Example:
+
+Card: 023
+Service: Payment
+Status: WAITING
+
+Waiting time:
+45 minutes
+
+System detects:
+
+Expected waiting:
+15 minutes
+
+Actual:
+45 minutes
+
+Notification:
+
+⚠ Long waiting customer
+
+Card: 023
+Service: Payment
+Waiting: 45 minutes
+
+Security can:
+
+Check why the customer is waiting
+Guide customer
+Inform manager
+
+Actions:
+
+[Contact customer]
+[Notify department]
+[Escalate]
+2. Customer called but did not come
+
+Example:
+
+Cashier calls:
+
+023 → Desk 4
+
+But nobody arrives.
+
+After some time:
+
+Customer not present
+
+Receptionist clicks:
+
+NO SHOW
+
+System changes:
+
+SERVING
+     ↓
+CALLED_NO_RESPONSE
+
+Options:
+
+Option 1:
+
+Recall
+
+CALL AGAIN
+Option 2:
+
+Skip
+
+SKIP CUSTOMER
+Option 3:
+
+Cancel
+
+CUSTOMER LEFT
+3. Customer lost card
+
+Customer says:
+
+"I lost my card."
+
+Security searches:
+
+Customer name
+Phone
+Ticket number
+
+System finds:
+
+Customer:
+145
+
+Card:
+023
+
+Current status:
+WAITING
+
+Security can:
+
+REPLACE CARD
+
+New card:
+
+023 replaced by 091
+
+History remains.
+
+4. Customer leaves before service
+
+Example:
+
+Customer waits 30 minutes and leaves.
+
+Security marks:
+
+CUSTOMER LEFT
+
+System:
+
+WAITING
+   ↓
+CANCELLED
+
+Card:
+
+WITH_CUSTOMER
+   ↓
+RETURN_PENDING
+5. Wrong service selected
+
+Example:
+
+Customer chose Payment.
+
+Later discovers they need Registration.
+
+Employee clicks:
+
+TRANSFER SERVICE
+
+or security can correct:
+
+CHANGE SERVICE
+
+System moves:
+
+Payment Queue
+      ↓
+Registration Queue
+
+Arrival time can either:
+
+Keep original arrival time
+Reset time
+
+(company chooses rule)
+
+6. Emergency / priority customers
+
+Some organizations need priority.
+
+Example:
+
+Hospital emergency.
+
+Security can create:
+
+Priority Level:
+
+NORMAL
+URGENT
+EMERGENCY
+
+Queue engine changes:
+
+Normal:
+
+001
+002
+003
+
+Priority:
+
+Emergency goes first
+7. Customer information requests
+
+Security can answer:
+
+"Where do I go?"
+
+Search:
+
+Service:
+Laboratory
+
+System shows:
+
+Building B
+Floor 2
+Waiting area C
+8. Crowd monitoring
+
+Security dashboard:
+
+LIVE STATUS
+
+Reception:
+20 waiting
+
+Cashier:
+5 waiting
+
+Laboratory:
+30 waiting
+
+Doctor:
+3 waiting
+
+Security can tell customers where delays are happening.
+
+Updated Security Role
+
+Security manages:
+
+✅ New customers
+✅ Card issuing
+✅ Card returns
+✅ Lost cards
+✅ Delayed customers
+✅ Customer guidance
+✅ No-show cases
+✅ Wrong service correction
+✅ Emergency priority
+✅ Crowd monitoring
+
+So security becomes the customer flow controller, while service providers focus only on serving customers. This makes the whole building run smoothly.queue-system/
+
+backend/
+
+├── src/
+
+│
+├── auth/
+│   ├── auth.controller.ts
+│   ├── auth.service.ts
+│
+├── company/
+│
+├── buildings/
+│
+├── departments/
+│
+├── services/
+│
+├── employees/
+│
+├── desks/
+│
+├── cards/
+│
+├── tickets/
+│
+├── queue/
+│   ├── queue.engine.ts
+│
+├── notifications/
+│
+├── reports/
+│
+├── websocket/
+│
+├── database/
+│
+└── main.ts
+
+
+
+
+
+
+
+For this project I recommend:
+
+TypeScript ✅
+
+Why:
+
+Frontend and backend can use the same language.
+Node.js backend uses TypeScript.
+Easier to maintain a big system.
+Good for real-time applications.
+
+Stack:
+
+Frontend: React + TypeScript
+Backend: Node.js + TypeScript
+Database: PostgreSQL
+ORM: Prisma
+
+Now the database tables.
+
+1. companies
+
+Stores the organizations using your system.
+
+companies
+-----------
+id
+name
+industry
+created_at
+
+Example:
+
+1 | Hospital X | Healthcare
+2. buildings
+
+A company can have many buildings.
+
+buildings
+-----------
+id
+company_id
+name
+location
+
+Example:
+
+1 | Hospital X | Building A
+3. departments
+
+Groups of services.
+
+departments
+-----------
+id
+building_id
+name
+
+Example:
+
+1 | Reception
+2 | Laboratory
+3 | Payment
+4. services
+
+The actual customer needs.
+
+services
+-----------
+id
+department_id
+name
+
+Example:
+
+1 | Payment
+2 | Registration
+5. users
+
+People who log in.
+
+users
+-----------
+id
+company_id
+name
+email
+password_hash
+role
+created_at
+
+Roles:
+
+ADMIN
+MANAGER
+SECURITY
+EMPLOYEE
+6. employees
+
+Worker information.
+
+employees
+-----------
+id
+user_id
+department_id
+employee_number
+7. desks
+
+Service counters.
+
+desks
+-----------
+id
+department_id
+name
+status
+
+Example:
+
+1 | Desk 4 | AVAILABLE
+8. cards
+
+Physical queue cards.
+
+cards
+-----------
+id
+company_id
+card_number
+status
+
+Status:
+
+AVAILABLE
+WITH_CUSTOMER
+RETURN_PENDING
+LOST
+9. tickets
+
+The customer queue.
+
+This is the most important table.
+
+tickets
+-----------
+id
+company_id
+card_id
+service_id
+ticket_number
+priority
+status
+created_at
+
+Status:
+
+WAITING
+SERVING
+COMPLETED
+TRANSFERRED
+CANCELLED
+
+Example:
+
+id:1
+card:023
+service:Payment
+status:WAITING
+10. service_sessions
+
+Tracks who served the customer.
+
+service_sessions
+-----------
+id
+ticket_id
+employee_id
+desk_id
+started_at
+finished_at
+11. ticket_history
+
+Tracks every movement.
+
+ticket_history
+-----------
+id
+ticket_id
+action
+created_at
+user_id
+
+Example:
+
+Ticket 023
+Transferred to Laboratory
+10:30
+12. card_history
+
+Tracks card movement.
+
+card_history
+-----------
+id
+card_id
+ticket_id
+action
+created_at
+
+Example:
+
+Card 023
+Returned
+10:45
+13. service_routes
+
+For companies with fixed flow.
+
+Example:
+
+Reception → Doctor → Payment
+
+service_routes
+-----------
+id
+company_id
+from_service_id
+to_service_id
+14. notifications
+
+Alerts.
+
+notifications
+-----------
+id
+user_id
+message
+type
+status
+created_at
+
+Example:
+
+Card 023 not returned
+The core relationship
+Company
+ |
+ ├── Buildings
+       |
+       ├── Departments
+              |
+              ├── Services
+                     |
+                     └── Tickets
+                            |
+                            └── Cards
+
+
+Users
+ |
+ Employees
+ |
+ Desks
+
+This is enough for the first professional version.
+
+Do not add more tables now. Build these first.
+
+
+
+
+
+
+Let's structure the full technology stack, folder layout, and complete production-ready Prisma Schema tailored to your dual-number mapping (internal ticket ID vs. external physical card number) and multi-department flow.
+
+🛠️ Complete Tech Stack
+To support multi-department routing, real-time main screen displays, audio announcements, and physical card timers:
+
+Backend: Node.js + Express (or NestJS) + TypeScript
+
+Database & ORM: PostgreSQL + Prisma ORM
+
+Real-time Engine: Socket.io or WS (essential for live TV displays, audio calls, and security alerts)
+
+Background Queue / Timers: BullMQ + Redis (for handling 5-minute card return alerts and non-blocking queue dispatches)
+
+Frontend: React + TypeScript + Tailwind CSS (Vite build)
+
+State & API Management: TanStack Query (React Query) + Socket.io Client
+
+📁 Project Folder Structure
+Plaintext
+queue-system/
+├── backend/
+│   ├── prisma/
+│   │   ├── schema.prisma              # Production DB Schema
+│   │   └── seed.ts                    # Initial test data
+│   ├── src/
+│   │   ├── config/                    # Env variables, DB & Redis connections
+│   │   ├── modules/
+│   │   │   ├── auth/                  # JWT Login & RBAC
+│   │   │   ├── company/               # Companies, Buildings, Departments
+│   │   │   ├── services/              # Services & Service Routes (Fixed Flow)
+│   │   │   ├── employees/             # User profiles, Desks, Employee mapping
+│   │   │   ├── cards/                 # Physical card inventory & dual-number mapping
+│   │   │   ├── tickets/               # Arrival, Calling, Finishing, Transferring
+│   │   │   ├── queue/                 # Priority Queue Engine & Dispatcher logic
+│   │   │   ├── notifications/         # Alerts (Card return timers, no-shows)
+│   │   │   └── reports/               # Wait times, staff analytics
+│   │   ├── websocket/
+│   │   │   ├── queue.gateway.ts       # Broadcasts "NOW SERVING" to main TV displays
+│   │   │   └── display.gateway.ts     # Triggers audio voice calls
+│   │   ├── middlewares/               # Auth guard, Role checker, Error handler
+│   │   ├── jobs/                      # BullMQ workers (5-min card timer)
+│   │   └── main.ts                    # App entry point
+│   ├── package.json
+│   └── tsconfig.json
+│
+└── frontend/
+    ├── src/
+    │   ├── assets/                    # Audio chimes, logos, icons
+    │   ├── components/                # Reusable UI (Buttons, Tables, Badges)
+    │   ├── context/                   # AuthContext, SocketContext
+    │   ├── hooks/                     # Custom hooks (useQueue, useSocket)
+    │   ├── pages/
+    │   │   ├── auth/                  # Login page
+    │   │   ├── security/              # Security Dashboard (Issue Card, Returns, Delayed)
+    │   │   ├── desk/                  # Staff Desk View (Call Next, Transfer, Finish)
+    │   │   ├── display/               # Main Big TV Screen View + Audio Voice Announcer
+    │   │   ├── desk-display/          # Small Over-the-Desk Display Screen
+    │   │   ├── admin/                 # Management, Routes, Staffing, Cards inventory
+    │   │   └── analytics/             # Reports dashboard
+    │   ├── services/                  # Axios API instances
+    │   └── App.tsx
+    ├── package.json
+    └── vite.config.ts
+🗄️ Complete Prisma Schema (prisma/schema.prisma)
+This schema incorporates your exact 14 tables, updated with dual-number tracking (display_number for public displays vs. auto-generated internal database ID) and your complete multi-department flow.
+
+Code snippet
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ------------------------------------------------------
+// ENUMS
+// ------------------------------------------------------
+
+enum Role {
+  ADMIN
+  MANAGER
+  SECURITY
+  EMPLOYEE
+}
+
+enum RoutingMode {
+  FIXED_FLOW
+  FLEXIBLE_FLOW
+}
+
+enum DeskStatus {
+  AVAILABLE
+  BUSY
+  OFFLINE
+}
+
+enum CardStatus {
+  AVAILABLE_AT_SECURITY
+  WITH_CUSTOMER
+  RETURN_PENDING
+  LOST
+}
+
+enum TicketStatus {
+  WAITING
+  SERVING
+  COMPLETED
+  TRANSFERRED
+  CANCELLED
+  NO_SHOW
+}
+
+enum PriorityLevel {
+  NORMAL
+  URGENT
+  EMERGENCY
+}
+
+// ------------------------------------------------------
+// 1. COMPANIES
+// ------------------------------------------------------
+model Company {
+  id          String        @id @default(uuid())
+  name        String
+  industry    String?
+  routingMode RoutingMode   @default(FIXED_FLOW)
+  createdAt   DateTime      @default(now()) @map("created_at")
+
+  buildings   Building[]
+  users       User[]
+  cards       Card[]
+  tickets     Ticket[]
+  routes      ServiceRoute[]
+
+  @@map("companies")
+}
+
+// ------------------------------------------------------
+// 2. BUILDINGS
+// ------------------------------------------------------
+model Building {
+  id          String       @id @default(uuid())
+  companyId   String       @map("company_id")
+  name        String
+  location    String?
+
+  company     Company      @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  departments Department[]
+
+  @@map("buildings")
+}
+
+// ------------------------------------------------------
+// 3. DEPARTMENTS
+// ------------------------------------------------------
+model Department {
+  id          String     @id @default(uuid())
+  buildingId  String     @map("building_id")
+  name        String
+
+  building    Building   @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  services    Service[]
+  desks       Desk[]
+  employees   Employee[]
+
+  @@map("departments")
+}
+
+// ------------------------------------------------------
+// 4. SERVICES
+// ------------------------------------------------------
+model Service {
+  id           String         @id @default(uuid())
+  departmentId String         @map("department_id")
+  name         String
+
+  department   Department     @relation(fields: [departmentId], references: [id], onDelete: Cascade)
+  employees    Employee[]
+  tickets      Ticket[]
+  
+  routesFrom   ServiceRoute[] @relation("FromService")
+  routesTo     ServiceRoute[] @relation("ToService")
+
+  @@map("services")
+}
+
+// ------------------------------------------------------
+// 5. USERS
+// ------------------------------------------------------
+model User {
+  id           String          @id @default(uuid())
+  companyId    String          @map("company_id")
+  name         String
+  email        String          @unique
+  passwordHash String          @map("password_hash")
+  role         Role            @default(EMPLOYEE)
+  createdAt    DateTime        @default(now()) @map("created_at")
+
+  company      Company         @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  employee     Employee?
+  historyLogs  TicketHistory[]
+  notifications Notification[]
+
+  @@map("users")
+}
+
+// ------------------------------------------------------
+// 6. EMPLOYEES
+// ------------------------------------------------------
+model Employee {
+  id             String           @id @default(uuid())
+  userId         String           @unique @map("user_id")
+  departmentId   String           @map("department_id")
+  serviceId      String?          @map("service_id")
+  employeeNumber String?          @map("employee_number")
+
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  department     Department       @relation(fields: [departmentId], references: [id], onDelete: Cascade)
+  service        Service?         @relation(fields: [serviceId], references: [id], onDelete: SetNull)
+  sessions       ServiceSession[]
+
+  @@map("employees")
+}
+
+// ------------------------------------------------------
+// 7. DESKS
+// ------------------------------------------------------
+model Desk {
+  id           String            @id @default(uuid())
+  departmentId String            @map("department_id")
+  name         String
+  status       DeskStatus        @default(OFFLINE)
+
+  department   Department        @relation(fields: [departmentId], references: [id], onDelete: Cascade)
+  sessions     ServiceSession[]
+
+  @@map("desks")
+}
+
+// ------------------------------------------------------
+// 8. CARDS (Physical Token Stock & Display Mapping)
+// ------------------------------------------------------
+model Card {
+  id            String        @id @default(uuid())
+  companyId     String        @map("company_id")
+  cardNumber    String        @map("card_number") // External Number shown to customer e.g. "002"
+  status        CardStatus    @default(AVAILABLE_AT_SECURITY)
+
+  company       Company       @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  tickets       Ticket[]
+  cardHistory   CardHistory[]
+
+  @@unique([companyId, cardNumber])
+  @@map("cards")
+}
+
+// ------------------------------------------------------
+// 9. TICKETS (Core Queue Engine)
+// ------------------------------------------------------
+model Ticket {
+  id            String           @id @default(uuid())
+  companyId     String           @map("company_id")
+  cardId        String           @map("card_id")
+  serviceId     String           @map("service_id")
+  ticketNumber  String           @map("ticket_number")  // Internal System Sequence ID
+  displayNumber String           @map("display_number") // External Number called on TV (e.g. "002")
+  priority      PriorityLevel    @default(NORMAL)
+  status        TicketStatus     @default(WAITING)
+  createdAt     DateTime         @default(now()) @map("created_at")
+
+  company       Company          @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  card          Card             @relation(fields: [cardId], references: [id])
+  service       Service          @relation(fields: [serviceId], references: [id])
+  
+  sessions      ServiceSession[]
+  history       TicketHistory[]
+  cardHistory   CardHistory[]
+
+  @@map("tickets")
+}
+
+// ------------------------------------------------------
+// 10. SERVICE_SESSIONS (Who served whom & desk timing)
+// ------------------------------------------------------
+model ServiceSession {
+  id         String    @id @default(uuid())
+  ticketId   String    @map("ticket_id")
+  employeeId String    @map("employee_id")
+  deskId     String    @map("desk_id")
+  startedAt  DateTime  @default(now()) @map("started_at")
+  finishedAt DateTime? @map("finished_at")
+
+  ticket     Ticket    @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  employee   Employee  @relation(fields: [employeeId], references: [id])
+  desk       Desk      @relation(fields: [deskId], references: [id])
+
+  @@map("service_sessions")
+}
+
+// ------------------------------------------------------
+// 11. TICKET_HISTORY (Movement Audit Log)
+// ------------------------------------------------------
+model TicketHistory {
+  id        String   @id @default(uuid())
+  ticketId  String   @map("ticket_id")
+  userId    String?  @map("user_id")
+  action    String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  ticket    Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@map("ticket_history")
+}
+
+// ------------------------------------------------------
+// 12. CARD_HISTORY (Physical Token Audit Trail)
+// ------------------------------------------------------
+model CardHistory {
+  id        String   @id @default(uuid())
+  cardId    String   @map("card_id")
+  ticketId  String?  @map("ticket_id")
+  action    String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  card      Card     @relation(fields: [cardId], references: [id], onDelete: Cascade)
+  ticket    Ticket?  @relation(fields: [ticketId], references: [id], onDelete: SetNull)
+
+  @@map("card_history")
+}
+
+// ------------------------------------------------------
+// 13. SERVICE_ROUTES (Fixed Flow Rules)
+// ------------------------------------------------------
+model ServiceRoute {
+  id            String   @id @default(uuid())
+  companyId     String   @map("company_id")
+  fromServiceId String   @map("from_service_id")
+  toServiceId   String   @map("to_service_id")
+
+  company       Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  fromService   Service  @relation("FromService", fields: [fromServiceId], references: [id], onDelete: Cascade)
+  toService     Service  @relation("ToService", fields: [toServiceId], references: [id], onDelete: Cascade)
+
+  @@unique([fromServiceId, toServiceId])
+  @@map("service_routes")
+}
+
+// ------------------------------------------------------
+// 14. NOTIFICATIONS (System Alerts)
+// ------------------------------------------------------
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  message   String
+  type      String
+  status    String   @default("UNREAD")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("notifications")
+}
+⚡ How This Schema Solves Your exact Setup Requirements
+Dual Numbering Built-In:
+
+tickets.ticket_number: Internal sequential ID used for strict queue sorting.
+
+tickets.display_number: The physical card number (002) handed out by security and displayed on main screens/spoken over speakers.
+
+Fixed vs. Flexible Flow Ready:
+
+Uses Company.routingMode (FIXED_FLOW or FLEXIBLE_FLOW) combined with service_routes to automate customer movement.
+
+Card Return Alerts:
+
+When a session finishes, the card status transitions to RETURN_PENDING. A background worker checks for unreturned cards past 5 minutes and pushes a record to the notifications table.
+
+
+
+
+
+
+
+
+
+
+
+
+Yes. Looking at your project, the next thing is not more setup pages. After /setup/flow, your application should become an operational queue management system.
+
+Your redirect should be:
+
+navigate("/admin");
+
+or
+
+navigate("/admin/dashboard");
+
+(depending on your routes).
+
+Your Admin Dashboard should become the Control Center
+
+It should not just say "Welcome". It should prepare the whole company for daily operations.
+
+Top KPI Cards
+Customers Waiting
+Now Serving
+Completed Today
+Employees Online
+Queue Status
+Waiting Queue
+Serving Now
+Average Wait Time
+Average Service Time
+Card Status
+Available at Security
+With Customers
+Return Pending
+Lost Cards
+Employee Status
+Online
+Offline
+Busy
+Available
+Desk Status
+Desk 1 - Busy
+Desk 2 - Available
+Desk 3 - Offline
+...
+Quick Actions
+
+Buttons like:
+
+Manage Employees
+Manage Cards
+Open Security Dashboard
+Open Public Display
+Reports
+Settings
+System Status
+✔ Queue Engine Running
+✔ Socket Connected
+✔ Database Connected
+✔ TV Display Connected
+✔ Notification Service Running
+Recent Activity
+Card 023 issued
+
+Customer sent to Cashier
+
+Employee John called Card 023
+
+Card 023 returned
+
+Employee Alice logged in
+Company Information
+Company Name
+Routing Mode
+Buildings
+Departments
+Services
+Employees
+Cards
+Public Display Preview
+
+A small live preview showing:
+
+NOW SERVING
+
+023
+
+Desk 4
+Charts
+Today's Customers
+
+Customers Per Hour
+
+Service Time
+
+Busy Departments
+Your Security Dashboard
+Available Cards
+Return Pending
+Lost Cards
+Issue Card
+Return Card
+Create Ticket
+Employee Dashboard
+Current Customer
+
+Call Next
+
+Complete
+
+Transfer
+
+No Show
+
+Queue Waiting
+
+Today's Statistics
+Public TV Display
+NOW SERVING
+
+023
+
+Desk 4
+
+Recently Called
+
+021
+022
+023
+
+Clock
+
+Company Logo
+Also add globally
+Full-screen loading spinner using your logo while API data loads.
+Skeleton loaders for tables and dashboard cards.
+Toast notifications for success/error.
+Confirmation dialogs before delete actions.
+Empty-state components instead of blank tables.
+Consistent colors, spacing, and typography across all pages.
+Socket.IO live updates so dashboards, desks, security, and the TV display refresh automatically without reloading.
+
+From the structure you posted, your backend modules and frontend folders are already organized well enough for this next phase. The missing work is wiring the dashboards to your APIs and Socket.IO, then polishing the UI with reusable components and loading states.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { Router } from "express";
+
+import { authenticate } from "../../middlewares/auth.middleware";
+
+import { CardController } from "./card.controller";
+
+
+
+const router = Router();
+
+
+
+// Create one card
+
+router.post(
+
+  "/",
+
+  authenticate,
+
+  CardController.createCard
+
+);
+
+
+
+// Create card range
+
+router.post(
+
+  "/batch",
+
+  authenticate,
+
+  CardController.createManyCards
+
+);
+
+
+
+// Get all cards
+
+router.get(
+
+  "/",
+
+  authenticate,
+
+  CardController.getCards
+
+);
+
+
+
+// Scanner lookup
+
+router.get(
+
+  "/:cardId",
+
+  authenticate,
+
+  CardController.getCardById
+
+);
+
+
+
+// Update card status
+
+router.patch(
+
+  "/:cardId/status",
+
+  authenticate,
+
+  CardController.updateStatus
+
+);
+
+
+
+// Delete card
+
+router.delete(
+
+  "/:cardId",
+
+  authenticate,
+
+  CardController.deleteCard
+
+);
+
+
+
+export default router;   import { Router } from "express";
+
+import { CompanyController } from "./company.controller";
+
+import { authenticate } from "../../middlewares/auth.middleware";
+
+import { authorizeRoles } from "../../middlewares/role.middleware";
+
+
+
+const router = Router();
+
+
+
+// ----------------------------------------------------
+
+// Authentication
+
+// ----------------------------------------------------
+
+
+
+router.use(authenticate);
+
+
+
+// ----------------------------------------------------
+
+// Company Setup (Onboarding)
+
+// ----------------------------------------------------
+
+
+
+router.post(
+
+  "/",
+
+  authorizeRoles("ADMIN"),
+
+  CompanyController.createCompany
+
+);
+
+
+
+router.patch(
+
+  "/",
+
+  authorizeRoles("ADMIN"),
+
+  CompanyController.updateCompany
+
+);
+
+
+
+router.post(
+
+  "/generate-invite-code",
+
+  authorizeRoles("ADMIN"),
+
+  CompanyController.generateInviteCode
+
+);
+
+
+
+router.post(
+
+  "/generate-cards",
+
+  authorizeRoles("ADMIN"),
+
+  CompanyController.generateCards
+
+);
+
+
+
+// ----------------------------------------------------
+
+// Company Information
+
+// ----------------------------------------------------
+
+
+
+router.get(
+
+  "/",
+
+  CompanyController.getCompanyDetails
+
+);
+
+
+
+// ----------------------------------------------------
+
+// Buildings
+
+// ----------------------------------------------------
+
+
+
+router.post(
+
+  "/buildings",
+
+  authorizeRoles("ADMIN", "MANAGER"),
+
+  CompanyController.createBuilding
+
+);
+
+
+
+router.get(
+
+  "/buildings",
+
+  CompanyController.getBuildings
+
+);
+
+
+
+// ----------------------------------------------------
+
+// Departments
+
+// ----------------------------------------------------
+
+
+
+router.post(
+
+  "/departments",
+
+  authorizeRoles("ADMIN", "MANAGER"),
+
+  CompanyController.createDepartment
+
+);
+
+
+
+router.get(
+
+  "/departments",
+
+  CompanyController.getDepartments
+
+);
+
+
+
+router.get(
+
+  "/buildings/:buildingId/departments",
+
+  CompanyController.getDepartmentsByBuilding
+
+);
+
+
+
+// ----------------------------------------------------
+
+// Queue Configuration
+
+// ----------------------------------------------------
+
+
+
+router.patch(
+
+  "/routing-mode",
+
+  authorizeRoles("ADMIN"),
+
+  CompanyController.updateRoutingMode
+
+);
+
+
+
+export default router;      import { Router } from "express";
+
+import { DeskController } from "./desk.controller";
+
+import { authenticate } from "../../middlewares/auth.middleware";
+
+
+
+const router = Router();
+
+
+
+// Create Desk
+
+router.post(
+
+  "/",
+
+  authenticate,
+
+  DeskController.createDesk
+
+);
+
+
+
+// Get Desks by Department
+
+router.get(
+
+  "/department/:departmentId",
+
+  authenticate,
+
+  DeskController.getDesksByDepartment
+
+);
+
+
+
+// Update Desk
+
+router.put(
+
+  "/:deskId",
+
+  authenticate,
+
+  DeskController.updateDesk
+
+);
+
+
+
+// Update Desk Status
+
+router.patch(
+
+  "/:deskId/status",
+
+  authenticate,
+
+  DeskController.updateDeskStatus
+
+);
+
+
+
+// Delete Desk
+
+router.delete(
+
+  "/:deskId",
+
+  authenticate,
+
+  DeskController.deleteDesk
+
+);
+
+
+
+export default router;    import { Router } from "express";
+
+import { authenticate } from "../../middlewares/auth.middleware";
+
+import { EmployeeController } from "./employee.controller";
+
+
+
+const router = Router();
+
+
+
+router.post(
+
+  "/",
+
+  authenticate,
+
+  EmployeeController.createEmployee
+
+);
+
+
+
+router.get(
+
+  "/department/:departmentId",
+
+  authenticate,
+
+  EmployeeController.getEmployeesByDepartment
+
+);
+
+
+
+router.get(
+
+  "/service/:serviceId",
+
+  authenticate,
+
+  EmployeeController.getEmployeesByService
+
+);
+
+
+
+router.put(
+
+  "/:employeeId",
+
+  authenticate,
+
+  EmployeeController.updateEmployee
+
+);
+
+
+
+router.delete(
+
+  "/:employeeId",
+
+  authenticate,
+
+  EmployeeController.deleteEmployee
+
+);
+
+
+
+export default router;    import { Router } from "express";
+
+import { authenticate } from "../../middlewares/auth.middleware";
+
+import { NotificationController } from "./notification.controller";
+
+
+
+const router = Router();
+
+
+
+router.get(
+
+  "/",
+
+  authenticate,
+
+  NotificationController.getNotifications
+
+);
+
+
+
+router.patch(
+
+  "/:notificationId/read",
+
+  authenticate,
+
+  NotificationController.markRead
+
+);
+
+
+
+router.delete(
+
+  "/:notificationId",
+
+  authenticate,
+
+  NotificationController.delete
+
+);
+
+
+
+export default router;    import { Router } from "express";
+
+import { authenticate } from "../../middlewares/auth.middleware";
+
+import { QueueController } from "./queue.controller";
+
+
+
+const router = Router();
+
+
+
+// Employee calls next customer
+
+router.post(
+
+  "/call-next",
+
+  authenticate,
+
+  QueueController.callNext
+
+);
+
+
+
+// Finish serving customer
+
+router.post(
+
+  "/complete",
+
+  authenticate,
+
+  QueueController.completeService
+
+);
+
+
+
+// Transfer customer to another service
+
+router.post(
+
+  "/transfer",
+
+  authenticate,
+
+  QueueController.transfer
+
+);
+
+
+
+// Customer did not show up
+
+router.post(
+
+  "/no-show",
+
+  authenticate,
+
+  QueueController.noShow
+
+);
+
+
+
+// Cancel ticket
+
+router.post(
+
+  "/cancel",
+
+  authenticate,
+
+  QueueController.cancel
+
+);
+
+
+
+// Security returns card
+
+router.post(
+
+  "/return-card",
+
+  authenticate,
+
+  QueueController.returnCard
+
+);
+
+
+
+export default router;    import { Router } from "express";
+
+import { authenticate } from "../../middlewares/auth.middleware";
+
+import { ReportController } from "./report.controller";
+
+
+
+const router = Router();
+
+
+
+router.get(
+
+  "/queue",
+
+  authenticate,
+
+  ReportController.queueStatistics
+
+);
+
+
+
+router.get(
+
+  "/cards",
+
+  authenticate,
+
+  ReportController.cardStatistics
+
+);
+
+
+
+router.get(
+
+  "/service-time",
+
+  authenticate,
+
+  ReportController.averageServiceTime
+
+);
+
+
+
+router.get(
+
+  "/employees",
+
+  authenticate,
+
+  ReportController.employeePerformance
+
+);
+
+
+
+router.get(
+
+  "/departments",
+
+  authenticate,
+
+  ReportController.departmentLoad
+
+);
+
+
+
+export default router;          import { Router } from "express";
+
+import { ServiceController } from "./service.controller";
+
+import { authenticate } from "../../middlewares/auth.middleware";
+
+
+
+const router = Router();
+
+
+
+// Create service
+
+router.post(
+
+  "/",
+
+  authenticate,
+
+  ServiceController.createService
+
+);
+
+
+
+router.get(
+
+  "/",
+
+  authenticate,
+
+  ServiceController.getAllServices
+
+);
+
+
+
+// Get services by department
+
+router.get(
+
+  "/department/:departmentId",
+
+  authenticate,
+
+  ServiceController.getServicesByDepartment
+
+);
+
+
+
+// Update service
+
+router.put(
+
+  "/:serviceId",
+
+  authenticate,
+
+  ServiceController.updateService
+
+);
+
+
+
+// Delete service
+
+router.delete(
+
+  "/:serviceId",
+
+  authenticate,
+
+  ServiceController.deleteService
+
+);
+
+
+
+export default router;            import { Router } from "express";
+
+import { authenticate } from "../../middlewares/auth.middleware";
+
+import { TicketController } from "./ticket.controller";
+
+
+
+const router = Router();
+
+
+
+router.post(
+
+  "/",
+
+  authenticate,
+
+  TicketController.createTicket
+
+);
+
+
+
+router.get(
+
+  "/waiting",
+
+  authenticate,
+
+  TicketController.waiting
+
+);
+
+
+
+router.get(
+
+  "/:ticketId",
+
+  authenticate,
+
+  TicketController.getTicket
+
+);
+
+
+
+router.patch(
+
+  "/:ticketId/status",
+
+  authenticate,
+
+  TicketController.updateStatus
+
+);
+
+
+
+router.patch(
+
+  "/:ticketId/transfer",
+
+  authenticate,
+
+  TicketController.transfer
+
+);
+
+
+
+export default router;
+
+
+
+
+
+
+
+
+
+
+
+an employee must have his dashboard according to his position or clients he receives after the primary service if client came at receptionist and sent in finace how will finance know and not starting as same as receptionist and employees if all are same then it;s good they receive clients accordingly but if it's due to position they get clients according to flow of owner account if he set from o to 10 and you are 5 you receive 5 so we are going to test this if works and design it then we end here other tomorrow okay sir
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes bro. Let me restate your exact bus-station idea, because I understand the flow now.
+
+🚌 Your QueueFlow Bus-Lane Idea
+
+You are not replacing Tap & Go.
+
+You are using the passenger's existing Tap & Go card as an identifier, while QueueFlow manages which passenger belongs to which bus and the order/group in which they board.
+
+1. Bus arrives
+
+Example:
+
+Bus A
+
+Kigali → Huye
+
+The volunteer opens QueueFlow and creates:
+
+Lane A → Bus A → Kigali–Huye
+
+The bus/trip is registered in the system.
+
+2. Passengers come to the lane
+
+Instead of everyone rushing toward the bus, a volunteer controls the lane.
+
+Passenger comes.
+
+Volunteer scans the passenger's Tap & Go card.
+
+QueueFlow records:
+
+Passenger/card ID → Lane A → Bus A
+
+So the volunteer's phone might show:
+
+BUS A — KIGALI → HUYE
+
+001 ✓
+002 ✓
+003 ✓
+004 ✓
+005 ✓
+006 ✓
+...
+
+The passenger doesn't need a new QueueFlow card.
+
+3. QueueFlow creates boarding groups
+
+This is the important part you added.
+
+Instead of requiring perfect order:
+
+001, 002, 003, 004...
+
+you can create groups.
+
+For example:
+
+Group 1: 001–005
+Group 2: 006–010
+Group 3: 011–015
+
+So if Group 1 is being boarded:
+
+001 ✅
+002 ✅
+003 ✅
+004 ✅
+005 ✅
+
+006 ❌ WAIT
+007 ❌ WAIT
+
+Once Group 2 opens:
+
+006–010 → ALLOWED
+
+This prevents everybody from pushing toward the bus at once.
+
+4. The volunteer's list goes to the bus
+
+This is the part you clarified.
+
+The volunteer's QueueFlow device has the passenger list.
+
+Before boarding, that list is associated with the bus/trip's scanner/device.
+
+So the bus-side system knows:
+
+These passenger IDs belong to this bus/trip.
+
+Then passengers tap their existing card when boarding.
+
+The system checks:
+
+Does this card belong to this bus/trip?
+
+Is this passenger's group currently allowed?
+
+If yes:
+
+✅ BOARD
+
+If not:
+
+❌ WAIT / WRONG BUS / NOT YET CALLED
+
+So what problem are you solving?
+
+You're solving uncontrolled passenger movement during busy periods.
+
+Imagine a major bus station at:
+
+6:30 AM
+
+Hundreds of people are travelling.
+
+There are:
+
+Many buses
+Different destinations
+Different departure times
+People waiting for different buses
+People trying to get onto the same bus
+Limited boarding space
+
+Without an organized system, people can crowd around buses and interfere with each other's boarding.
+
+Your system creates:
+
+Passenger → Destination → Bus → Lane → Boarding group → Bus
+
+Instead of:
+
+Passenger → Crowd → "Is this my bus?" → Push toward bus
+
+Is it really needed?
+Potentially, yes — but this needs validation.
+
+The problem you're targeting is real: crowding and poor boarding organization at high-volume transport hubs.
+
+But you shouldn't assume every bus station needs your system.
+
+If a station already has an excellent system where passengers are automatically assigned seats, called in an orderly way, and boarding is controlled, QueueFlow may add little value.
+
+Your strongest target would be a station where:
+
+Many buses + many destinations + heavy peak-hour traffic + crowding + difficult boarding coordination.
+
+That's where your idea becomes interesting.
+
+What makes your idea different from ordinary queue management?
+
+Normal queue:
+
+"You are number 25. Wait."
+
+Your transport version is:
+
+"You are assigned to Bus A, in Lane A, Group 2. When Group 2 opens, your Tap & Go ID is accepted by the bus scanner."
+
+That's more than a queue.
+
+It's boarding-flow management.
+
+And there's one BIG thing to verify
+
+The biggest question isn't whether you can build the QueueFlow software.
+
+You can prototype that.
+
+The question is:
+
+Can QueueFlow legally/technically read the existing Tap & Go card identifier and integrate with the bus's Tap & Go equipment?
+
+That depends on the Tap & Go operator and its hardware/API/access rules.
+
+So don't buy expensive equipment yet.
+
+First prototype it like this:
+
+Fake passenger IDs
+
+↓
+
+Volunteer Android phone
+
+↓
+
+Create Bus/Lane
+
+↓
+
+Scan passengers
+
+↓
+
+Create groups
+
+↓
+
+Bus-side phone/scanner
+
+↓
+
+Scan passenger
+
+↓
+
+ALLOW / REJECT
+
+If that works with 50–100 simulated passengers, then you have something worth demonstrating to a transport operator.
+
+And bro, this is actually connected to your original QueueFlow idea very well:
+
+Bank: Customer → Service → Desk
+
+Hospital: Patient → Department → Service
+
+Bus: Passenger → Destination → Bus
+
+The underlying product is becoming a system for organizing people's movement through busy physical environments.
+
+
+
+
+
+xactly. That's the right way to think about it. You don't need QueueFlow everywhere, all the time.
+
+You need it when normal manual organization starts breaking down.
+
+🚌 Example at a bus station
+
+Suppose there are 10 buses.
+
+At 2 PM:
+
+Bus 1 → 8 passengers
+Bus 2 → 12 passengers
+Bus 3 → 5 passengers
+Bus 4 → 9 passengers
+
+No serious problem. People can organize themselves.
+
+QueueFlow isn't necessary.
+
+But at 6 PM:
+
+Bus A → 80 people
+Bus B → 70 people
+Bus C → 15 people
+Bus D → 100 people
+
+Now you have a different situation.
+
+People may:
+
+Crowd around the popular buses.
+Enter the wrong boarding lane.
+Interfere with passengers for another bus.
+Not know which group should board.
+Create a long physical line.
+Make volunteers/staff manually control everyone.
+Delay departure.
+
+That's when QueueFlow becomes useful.
+
+Your system should therefore be "on demand"
+
+This is an important part of the business model.
+
+The station doesn't have to use QueueFlow for every bus.
+
+Instead:
+
+When passenger volume exceeds a certain level, open a QueueFlow lane.
+
+For example:
+
+Bus capacity: 50
+Passengers waiting: 12
+
+➡️ Normal process.
+
+But:
+
+Passengers waiting: 70
+
+➡️ OPEN QUEUEFLOW LANE
+
+The volunteer creates:
+
+Bus A — Lane 04
+
+Then scans/registers passengers.
+
+And you could make the system detect the problem
+
+Imagine the station dashboard:
+
+BUS A — HUYE
+Passengers: 82
+Capacity: 50
+Status: 🔴 HIGH DEMAND
+
+BUS B — MUSANZE
+Passengers: 18
+Capacity: 50
+Status: 🟢 NORMAL
+
+BUS C — RUBAVU
+Passengers: 47
+Capacity: 50
+Status: 🟡 BUSY
+
+The station manager immediately sees:
+
+Bus A needs crowd management.
+
+They open a controlled QueueFlow lane.
+
+That's much more useful than forcing every bus to use it.
+
+This gives you a clear problem statement
+
+Don't say:
+
+❌ "Everyone needs QueueFlow."
+
+Say:
+
+"QueueFlow is designed for high-volume periods when normal manual customer or passenger flow management becomes difficult."
+
+That's a much stronger business idea.
+
+And it applies to your other markets too:
+
+Bank: normal day → no problem.
+End-of-month/payday → huge queues → QueueFlow useful.
+
+University: normal day → manageable.
+Registration week → huge queues → QueueFlow useful.
+
+Hospital: quiet day → manageable.
+High patient volume → QueueFlow useful.
+
+Bus station: normal afternoon → manageable.
+Morning/evening rush → QueueFlow useful.
+
+So the real product isn't:
+
+"A system that everybody must use."
+
+It's:
+
+"A system that organizations activate when customer volume or movement complexity becomes difficult to manage."
+
+That is a much better problem to solve.
